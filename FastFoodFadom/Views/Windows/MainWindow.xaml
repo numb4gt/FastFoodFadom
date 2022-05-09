@@ -4,17 +4,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FastFoodFadom"
+        xmlns:f="clr-namespace:FastFoodFadom.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="190*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="171*"/>
-            <ColumnDefinition Width="629*"/>
-        </Grid.ColumnDefinitions>
+        Title="{Binding Path=Title}" Height="1000" Width="1800">
+    <Window.DataContext>
+        <f:MainWindowViewModel/>
+    </Window.DataContext>
 
-    </Grid>
+    <Border Background="White"
+            CornerRadius="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="190*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="171*"/>
+                <ColumnDefinition Width="629*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Margin="0,134,1415,0" Background="Green" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <StackPanel Background="Green" Grid.Column="1"/>
+            <StackPanel Background="Green"/>
+
+
+
+        </Grid>
+    </Border>
 </Window>
