@@ -19,7 +19,7 @@
             </Setter>
         </Style>
         <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
-        <SolidColorBrush x:Key="Button.Static.Border" Color="GreenYellow"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="DarkSlateGray"/>
         <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
         <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
         <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
@@ -86,11 +86,11 @@
 
             <StackPanel Grid.Row="1"
                         Grid.Column="0"
-                        Background="Green">
-                <Button Height="180"
-                             Width="180"
-                             Background="White"
-                             Margin="0,30,0,0"
+                        Background="LightSlateGray">
+                <Button Height="245"
+                             Width="240"
+                             Background="LightGray"
+                             Margin="0,0,0,0"
                              >
                     <Grid Height="170" Width="170">
                         <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/food-info.png"  Width="100"/>
@@ -100,10 +100,10 @@
                                    Margin="35,135,0,0"></TextBlock>
                     </Grid>
                 </Button>
-                <Button Height="180"
-                             Width="180"
-                             Background="White"
-                             Margin="0,30,0,0"
+                <Button Height="200"
+                             Width="240"
+                             Background="Gainsboro"
+                             Margin="0,0,0,0"
                         >
                     <Grid Height="170" Width="170">
                         <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/main_menu.png"  Width="100"/>
@@ -115,10 +115,10 @@
                     </Grid>
 
                 </Button>
-                <Button Height="180"
-                             Width="180"
-                             Background="White"
-                             Margin="0,30,0,0">
+                <Button Height="200"
+                             Width="240"
+                             Background="Gainsboro"
+                             Margin="0,0,0,0">
                     <Grid Height="170" Width="170">
                         <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/snacks.png"  Width="100"/>
                         <TextBlock Text="Закуски"
@@ -127,10 +127,10 @@
                     </Grid>
                 </Button>
 
-                <Button Height="180"
-                             Width="180"
-                             Background="White"
-                             Margin="0,30,0,0">
+                <Button Height="200"
+                             Width="240"
+                             Background="Gainsboro"
+                             Margin="0,0,0,0">
                     <Grid Height="170" Width="170">
                         <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/drinks.png"  Width="100"/>
                         <TextBlock Text="Напитки"
@@ -144,7 +144,7 @@
 
             <StackPanel Grid.Row="0"
                         Grid.Column="0"
-                        Background="Green">
+                        Background="LightSlateGray">
                 <Grid Margin="0,15" Height="80">
                     <Image Source="C:\Users\USER\Desktop\КП\Проект\FastFoodFadom\FastFoodFadom/Images/ru.png" Width="50" Margin="118,0,83,0">
                         <Image.InputBindings>
@@ -165,17 +165,17 @@
 
             <StackPanel Grid.Row="0"
                         Grid.Column="1"
-                        Background="Green">
+                        Background="LightSlateGray">
                 <Grid>
 
                     <TextBlock Text="FastFoodFandom"
-                                      Foreground="White"
+                                      Foreground="Gainsboro"
                                        FontSize="100" Margin="30,5,0,0" FontFamily="Magneto" 
                                ></TextBlock>
 
                     <Button Style="{DynamicResource ButtonRadiusRound}" Height="70"
                              Width="300"
-                             Background="White"
+                             Background="Gainsboro"
                              Margin="950,0,0,0">
                         <TextBlock Text="Ваш заказ"
                                       Foreground="Black"
@@ -184,7 +184,7 @@
                     </Button>
 
                     <TextBlock Text="0 $"
-                                      Foreground="White"
+                                      Foreground="Gainsboro"
                                        FontSize="30" Margin="1450,45,0,0" FontFamily="GOST Type BU" 
                                ></TextBlock>
 
