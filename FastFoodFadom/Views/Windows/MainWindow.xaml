@@ -6,29 +6,197 @@
         xmlns:local="clr-namespace:FastFoodFadom"
         xmlns:f="clr-namespace:FastFoodFadom.ViewModels"
         mc:Ignorable="d"
-        Title="{Binding Path=Title}" Height="1000" Width="1800">
+        Title="{Binding Path=Title}" Height="1000" Width="1800"
+         Icon="C:\Users\USER\Desktop\КП\Проект\FastFoodFadom\FastFoodFadom\Images/bnd.ico">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" SnapsToDevicePixels="true" StrokeThickness="1" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="GreenYellow"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonRadiusRound" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="10"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="30" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Window.DataContext>
         <f:MainWindowViewModel/>
     </Window.DataContext>
 
+
+
     <Border Background="White"
             CornerRadius="20">
+
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30*"/>
-                <RowDefinition Height="190*"/>
-            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="171*"/>
-                <ColumnDefinition Width="629*"/>
+                <ColumnDefinition Width="251*"/>
+                <ColumnDefinition Width="1549*"/>
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="29*"/>
+                <RowDefinition Height="218*"/>
+            </Grid.RowDefinitions>
 
-            <StackPanel Margin="0,134,1415,0" Background="Green" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-            <StackPanel Background="Green" Grid.Column="1"/>
-            <StackPanel Background="Green"/>
+            <StackPanel Grid.Row="1"
+                        Grid.Column="0"
+                        Background="Green">
+                <Button Height="180"
+                             Width="180"
+                             Background="White"
+                             Margin="0,30,0,0"
+                             >
+                    <Grid Height="170" Width="170">
+                        <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/food-info.png"  Width="100"/>
+                        <TextBlock Text="Основное"
+                                      Foreground="Black"
+                                       FontSize="20"
+                                   Margin="35,135,0,0"></TextBlock>
+                    </Grid>
+                </Button>
+                <Button Height="180"
+                             Width="180"
+                             Background="White"
+                             Margin="0,30,0,0"
+                        >
+                    <Grid Height="170" Width="170">
+                        <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/main_menu.png"  Width="100"/>
+                        <TextBlock Text="Главные блюда"
+                                      Foreground="Black"
+                                       FontSize="20"  Margin="15,135,0,0">
+                            
+                        </TextBlock>
+                    </Grid>
 
+                </Button>
+                <Button Height="180"
+                             Width="180"
+                             Background="White"
+                             Margin="0,30,0,0">
+                    <Grid Height="170" Width="170">
+                        <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/snacks.png"  Width="100"/>
+                        <TextBlock Text="Закуски"
+                                      Foreground="Black"
+                                       FontSize="20"  Margin="47,135,0,0"></TextBlock>
+                    </Grid>
+                </Button>
+
+                <Button Height="180"
+                             Width="180"
+                             Background="White"
+                             Margin="0,30,0,0">
+                    <Grid Height="170" Width="170">
+                        <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/drinks.png"  Width="100"/>
+                        <TextBlock Text="Напитки"
+                                      Foreground="Black"
+                                       FontSize="20" Margin="47,135,0,0"></TextBlock>
+                    </Grid>
+                </Button>
+
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="0"
+                        Grid.Column="0"
+                        Background="Green">
+                <Grid Margin="0,15" Height="80">
+                    <Image Source="C:\Users\USER\Desktop\КП\Проект\FastFoodFadom\FastFoodFadom/Images/ru.png" Width="50" Margin="118,0,83,0">
+                        <Image.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding ChangeLanguageCommand}" CommandParameter="ru"/>
+                        </Image.InputBindings>
+                    </Image>
+                    <Image Source="C:\Users\USER\Desktop\КП\Проект\FastFoodFadom\FastFoodFadom/Images/us.png" Width="50" Margin="184,0,17,0">
+                        <Image.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding ChangeLanguageCommand}" CommandParameter="ru"/>
+                        </Image.InputBindings>
+                    </Image>
+
+                    <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/burger.png"  Width="50" Margin="24,0,177,0"/>
+                </Grid>
+
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="0"
+                        Grid.Column="1"
+                        Background="Green">
+                <Grid>
+
+                    <TextBlock Text="FastFoodFandom"
+                                      Foreground="White"
+                                       FontSize="100" Margin="30,5,0,0" FontFamily="Magneto" 
+                               ></TextBlock>
+
+                    <Button Style="{DynamicResource ButtonRadiusRound}" Height="70"
+                             Width="300"
+                             Background="White"
+                             Margin="950,0,0,0">
+                        <TextBlock Text="Ваш заказ"
+                                      Foreground="Black"
+                                       FontSize="40"  FontFamily="GOST Type BU" 
+                               ></TextBlock>
+                    </Button>
+
+                    <TextBlock Text="0 $"
+                                      Foreground="White"
+                                       FontSize="30" Margin="1450,45,0,0" FontFamily="GOST Type BU" 
+                               ></TextBlock>
+
+                </Grid>
+
+
+
+            </StackPanel>
 
 
         </Grid>
     </Border>
+
+
 </Window>
