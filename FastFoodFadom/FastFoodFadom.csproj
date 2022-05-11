@@ -8,10 +8,10 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Infrastucture\" />
     <Folder Include="Models\" />
     <Folder Include="Services\" />
     <Folder Include="Images\" />
+    <Folder Include="Style\" />
   </ItemGroup>
 
 </Project>
