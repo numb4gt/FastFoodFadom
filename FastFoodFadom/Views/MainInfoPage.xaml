@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="FastFoodFadom.Views.MainInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FastFoodFadom.Views"
+             xmlns:f="clr-namespace:FastFoodFadom.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="868" d:DesignWidth="1549">
+
+    <UserControl.DataContext>
+        <f:MainInfoPageViewModel/>
+    </UserControl.DataContext>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="776*"/>
+            <ColumnDefinition Width="773*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="409*"/>
+            <RowDefinition Height="459*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    Background="#F9F7F7">
+
+            <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/people.png"  Width="250" Margin="-350,110,0,0" />
+            <TextBlock Text="Клиенты довольны"
+                       Foreground="Black"
+                       FontSize="60"
+                       Margin="350,-210,0,0" Width="372" FontFamily="Arial Black"
+                
+                               TextWrapping="Wrap"
+                               TextAlignment="Center">
+            </TextBlock>
+
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    Background="#48466D">
+
+            <TextBlock Text="Про нас"
+                       Foreground="Black"
+                       FontSize="60"
+                       Margin="-200,150,0,0" Width="372" FontFamily="Arial Black"
+                                  />
+
+            <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/house.png"  Width="250" Margin="350,-160,0,0"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="1"
+                    Background="#F9F7F7">
+            <TextBlock Text="Высокое качество"
+                       Foreground="Black"
+                       FontSize="60"
+                       Margin="-280,120,0,0" Width="372" FontFamily="Arial Black"
+                
+                               TextWrapping="Wrap"
+                               TextAlignment="Center">
+            </TextBlock>
+
+            <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/star.png"  Width="250" Margin="350,-210,0,0"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    Background="#48466D">
+
+            <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/search.png"  Width="250" Margin="-350,110,0,0" />
+            <TextBlock Text="Богатый выбор"
+                       Foreground="Black"
+                       FontSize="60"
+                       Margin="330,-210,0,0" Width="372" FontFamily="Arial Black"
+                
+                               TextWrapping="Wrap"
+                               TextAlignment="Center">
+            </TextBlock>
+
+        </StackPanel>
+
+
+    </Grid>
+</UserControl>

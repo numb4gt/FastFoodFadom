@@ -32,7 +32,7 @@
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
             <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-            <Setter Property="BorderThickness" Value="10"/>
+            <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Padding" Value="1"/>
@@ -86,30 +86,34 @@
 
             <StackPanel Grid.Row="1"
                         Grid.Column="0"
-                        Background="LightSlateGray">
+                        Background="#112D4E">
                 <Button Height="245"
                              Width="240"
-                             Background="LightGray"
+                             Background="#DBE2EF"
                              Margin="0,0,0,0"
+                             Command="{Binding ChangeViewCommand}" 
+                             CommandParameter="{Binding Info}"
                              >
                     <Grid Height="170" Width="170">
                         <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/food-info.png"  Width="100"/>
                         <TextBlock Text="Основное"
                                       Foreground="Black"
                                        FontSize="20"
-                                   Margin="35,135,0,0"></TextBlock>
+                                   Margin="35,145,0,0" FontFamily="Arial Black"></TextBlock>
                     </Grid>
                 </Button>
                 <Button Height="200"
                              Width="240"
-                             Background="Gainsboro"
+                             Background="#DBE2EF"
                              Margin="0,0,0,0"
+                             Command="{Binding ChangeViewCommand}" 
+                             CommandParameter="{Binding Menu}"
                         >
                     <Grid Height="170" Width="170">
-                        <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/main_menu.png"  Width="100"/>
+                        <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/fast-food2.png"  Width="100"/>
                         <TextBlock Text="Главные блюда"
                                       Foreground="Black"
-                                       FontSize="20"  Margin="15,135,0,0">
+                                       FontSize="18"  Margin="5,145,0,0" FontFamily="Arial Black">
                             
                         </TextBlock>
                     </Grid>
@@ -117,25 +121,29 @@
                 </Button>
                 <Button Height="200"
                              Width="240"
-                             Background="Gainsboro"
-                             Margin="0,0,0,0">
+                             Background="#DBE2EF"
+                             Margin="0,0,0,0"
+                             Command="{Binding ChangeViewCommand}" 
+                             CommandParameter="{Binding Menu}">
                     <Grid Height="170" Width="170">
                         <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/snacks.png"  Width="100"/>
                         <TextBlock Text="Закуски"
                                       Foreground="Black"
-                                       FontSize="20"  Margin="47,135,0,0"></TextBlock>
+                                       FontSize="20"  Margin="37,145,0,0" FontFamily="Arial Black"></TextBlock>
                     </Grid>
                 </Button>
 
                 <Button Height="200"
                              Width="240"
-                             Background="Gainsboro"
-                             Margin="0,0,0,0">
+                             Background="#DBE2EF"
+                             Margin="0,0,0,0"
+                             Command="{Binding ChangeViewCommand}" 
+                             CommandParameter="{Binding Menu}">
                     <Grid Height="170" Width="170">
                         <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/drinks.png"  Width="100"/>
                         <TextBlock Text="Напитки"
                                       Foreground="Black"
-                                       FontSize="20" Margin="47,135,0,0"></TextBlock>
+                                       FontSize="20" Margin="40,145,0,0" FontFamily="Arial Black"></TextBlock>
                     </Grid>
                 </Button>
 
@@ -144,7 +152,7 @@
 
             <StackPanel Grid.Row="0"
                         Grid.Column="0"
-                        Background="LightSlateGray">
+                        Background="#112D4E">
                 <Grid Margin="0,15" Height="80">
                     <Image Source="C:\Users\USER\Desktop\КП\Проект\FastFoodFadom\FastFoodFadom/Images/ru.png" Width="50" Margin="118,0,83,0">
                         <Image.InputBindings>
@@ -157,7 +165,11 @@
                         </Image.InputBindings>
                     </Image>
 
-                    <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/burger.png"  Width="50" Margin="24,0,177,0"/>
+                    <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/burger.png"  Width="50" Margin="24,0,177,0">
+                        <Image.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding ChangeViewCommand}" CommandParameter="{Binding Admin}"/>
+                        </Image.InputBindings>
+                    </Image>
                 </Grid>
 
 
@@ -165,34 +177,59 @@
 
             <StackPanel Grid.Row="0"
                         Grid.Column="1"
-                        Background="LightSlateGray">
+                        Background="#112D4E">
                 <Grid>
 
                     <TextBlock Text="FastFoodFandom"
-                                      Foreground="Gainsboro"
-                                       FontSize="100" Margin="30,5,0,0" FontFamily="Magneto" 
+                                      Foreground="#F9F7F7"
+                                       FontSize="80" Margin="20,10,0,0" FontFamily="Arial Black" 
                                ></TextBlock>
 
                     <Button Style="{DynamicResource ButtonRadiusRound}" Height="70"
                              Width="300"
-                             Background="Gainsboro"
-                             Margin="950,0,0,0">
+                             Background="#DBE2EF"
+                             Margin="800,0,0,0"
+                            Command="{Binding ChangeViewCommand}" 
+                             CommandParameter="{Binding Customer}">
                         <TextBlock Text="Ваш заказ"
                                       Foreground="Black"
-                                       FontSize="40"  FontFamily="GOST Type BU" 
+                                       FontSize="40"  FontFamily="Arial Black"
                                ></TextBlock>
                     </Button>
 
-                    <TextBlock Text="0 $"
-                                      Foreground="Gainsboro"
-                                       FontSize="30" Margin="1450,45,0,0" FontFamily="GOST Type BU" 
+                    <Button Style="{DynamicResource ButtonRadiusRound}" Height="70"
+                             Width="200"
+                             Background="#DBE2EF"
+                             Margin="1330,0,0,0"
+                            Command="{Binding ChangeViewCommand}" 
+                             CommandParameter="{Binding Customer}"
+                            >
+                        <TextBlock Text="0 $"
+                                      Foreground="Black"
+                                       FontSize="40"  FontFamily="Arial Black"
                                ></TextBlock>
+                    </Button>
+
+                    
 
                 </Grid>
 
+        
 
 
             </StackPanel>
+
+
+            <StackPanel Grid.Row="1"
+                        Grid.Column="1"
+                        Background="#112D4E"/>
+
+            <ContentControl
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Content="{Binding CurrentView}"
+                            Margin=" 10"/>
+                
 
 
         </Grid>
