@@ -44,7 +44,7 @@
                     Background="#48466D">
 
             <TextBlock Text="Про нас"
-                       Foreground="Black"
+                       Foreground="#F9F7F7"
                        FontSize="60"
                        Margin="-200,150,0,0" Width="372" FontFamily="Arial Black"
                                   />
@@ -75,7 +75,7 @@
 
             <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/search.png"  Width="250" Margin="-350,110,0,0" />
             <TextBlock Text="Богатый выбор"
-                       Foreground="Black"
+                       Foreground="#F9F7F7"
                        FontSize="60"
                        Margin="330,-210,0,0" Width="372" FontFamily="Arial Black"
                 

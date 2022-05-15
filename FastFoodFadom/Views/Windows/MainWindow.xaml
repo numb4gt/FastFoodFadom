@@ -65,6 +65,7 @@
             </Setter>
         </Style>
     </Window.Resources>
+    
     <Window.DataContext>
         <f:MainWindowViewModel/>
     </Window.DataContext>
@@ -204,7 +205,7 @@
                             Command="{Binding ChangeViewCommand}" 
                              CommandParameter="{Binding Customer}"
                             >
-                        <TextBlock Text="0 $"
+                        <TextBlock Text="{Binding Path=Coast, UpdateSourceTrigger=PropertyChanged}"
                                       Foreground="Black"
                                        FontSize="40"  FontFamily="Arial Black"
                                ></TextBlock>
@@ -214,11 +215,7 @@
 
                 </Grid>
 
-        
-
-
             </StackPanel>
-
 
             <StackPanel Grid.Row="1"
                         Grid.Column="1"
