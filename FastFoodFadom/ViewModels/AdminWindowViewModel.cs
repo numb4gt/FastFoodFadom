@@ -36,10 +36,9 @@ namespace FastFoodFadom.ViewModels
 
         public AdminOrdersPageViewModel Admin { get; set; }
         public CustomerOrderPageViewModel Customer { get; set; }
-        public MainInfoPageViewModel Info { get; set; }
         public MainMenuPageVievModel Menu { get; set; }
 
-        private object _currentView = new MainInfoPageViewModel();
+        private object _currentView = new AdminOrdersPageViewModel();
         public object CurrentView
         {
             get { return _currentView; }
@@ -85,7 +84,6 @@ namespace FastFoodFadom.ViewModels
 
             Admin = new AdminOrdersPageViewModel();
             Menu = new MainMenuPageVievModel();
-            Info = new MainInfoPageViewModel();
             Customer = new CustomerOrderPageViewModel();
 
             ChangeViewCommand = new LamdaCommand(OnChangeViewCommandExecuted, CanChangeViewCommandExecute);

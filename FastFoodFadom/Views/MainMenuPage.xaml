@@ -30,13 +30,13 @@
                     </Grid.RowDefinitions>
                     <DataGrid ItemsSource="{Binding List}" AutoGenerateColumns="False" IsReadOnly="True" Grid.Column="0" x:Name="Blase" SelectedItem="{Binding FoodSelected, Mode=TwoWay}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Key" Width="120" Binding="{Binding Path=FoodId}">
+                            <DataGridTextColumn Header="Key" Width="120" FontSize="30" Binding="{Binding Path=FoodId}">
                             </DataGridTextColumn>
 
-                            <DataGridTextColumn  Header="Name" Width="300" Binding="{Binding Path=Name}">
+                            <DataGridTextColumn  Header="Name" Width="300" FontSize="30"  Binding="{Binding Path=Name}">
                             </DataGridTextColumn>
 
-                            <DataGridTextColumn  Header="Coast" Width="300" Binding="{Binding Path=Coast}">
+                            <DataGridTextColumn  Header="Coast" Width="300" FontSize="30" Binding="{Binding Path=Coast}">
                             </DataGridTextColumn>
 
                             <DataGridTemplateColumn Header="Image">
@@ -123,11 +123,11 @@
 
 
 
-                        <TextBlock Grid.Column="1" Width="300" Background="White" Height="50" Margin="192,23,150,227" Text="{Binding FoodSelected.FoodId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Grid.Column="1" Width="300" Background="White" FontSize="17" Height="50" Margin="192,23,150,227" Text="{Binding FoodSelected.FoodId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
-                        <TextBox Grid.Column="1"  Width="300" Height="50" Margin="192,78,150,172" Text="{Binding FoodSelected.Coast, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBox Grid.Column="1"  Width="300" Height="50" FontSize="17" Margin="192,78,150,172" Text="{Binding FoodSelected.Coast, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
-                        <TextBox Grid.Column="1"  Width="300" Height="50" Margin="192,133,150,117" Text="{Binding FoodSelected.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Column="1"  Width="300" Height="50" FontSize="17" Margin="192,133,150,117" Text="{Binding FoodSelected.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
 
 
