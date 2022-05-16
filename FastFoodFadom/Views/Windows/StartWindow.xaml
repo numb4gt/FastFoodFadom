@@ -1,0 +1,56 @@
+﻿<Window x:Class="FastFoodFadom.Views.Windows.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:f="clr-namespace:FastFoodFadom.ViewModels"
+        xmlns:local="clr-namespace:FastFoodFadom.Views.Windows"
+        mc:Ignorable="d"
+        Title="StartWindow" Height="650" Width="450" WindowStartupLocation="CenterScreen"
+        Icon="C:\Users\USER\Desktop\КП\Проект\FastFoodFadom\FastFoodFadom\Images/bnd.ico">
+    <Window.DataContext>
+        <f:StartWindowViewModel/>
+    </Window.DataContext>
+
+    <Grid Background="#112D4E">
+
+        <TextBlock Text="Добро пожаловать в FastFoodFandom" TextWrapping="Wrap"  TextAlignment="Center"
+                                      Foreground="White"
+                                       FontSize="30"  Margin="0,114,0,0" FontFamily="Arial Black">
+
+        </TextBlock>
+
+        <Button Height="200"
+                             Width="240"
+                             Background="#DBE2EF"
+                             Margin="0,0,0,0"
+                             Command="{Binding ChangeViewOnMainWindow}" 
+                           
+                        >
+            <Grid Height="170" Width="170">
+                <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/fast-food2.png"  Width="100"/>
+                <TextBlock Text="Сделать заказ"
+                                      Foreground="Black"
+                                       FontSize="18"  Margin="10,145,0,0" FontFamily="Arial Black">
+
+                </TextBlock>
+            </Grid>
+
+        </Button>
+
+        <Button Height="50"
+                             Width="50"
+                             Background="#DBE2EF"
+                             Margin="370,550,0,0"
+                             Command="{Binding ChangeViewOnLoginWindow}" 
+                             
+                        >
+            <Grid Height="40" Width="40">
+                <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/man.png" Margin="0,0,0,0"/>
+               
+            </Grid>
+
+        </Button>
+
+    </Grid>
+</Window>

@@ -2,7 +2,10 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:FastFoodFadom"
-             StartupUri="Views\Windows\MainWindow.xaml"
+             StartupUri="Views\Windows\StartWindow.xaml"
+             xmlns:AdminWn="Views\Windows\AdminWindow.xaml"
+             xmlns:LoginWn="Views\Windows\LoginWindow.xaml"
+             xmlns:MainWn="Views\Windows\MainWindow.xaml"
              xmlns:View="clr-namespace:FastFoodFadom.Views"
              xmlns:ViewModel="clr-namespace:FastFoodFadom.ViewModels">
     
@@ -25,6 +28,7 @@
             <DataTemplate DataType="{x:Type ViewModel:CustomerOrderPageViewModel}">
                 <View:CustomerOrderPage/>
             </DataTemplate>
+
             
         </ResourceDictionary>
 

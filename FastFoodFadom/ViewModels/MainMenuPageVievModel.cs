@@ -26,7 +26,7 @@ namespace FastFoodFadom.ViewModels
     class MainMenuPageVievModel : ViewModelBase
     {
         private int _CodOfFood;
-        
+
 
         public int CodOfFood
         {
@@ -67,9 +67,14 @@ namespace FastFoodFadom.ViewModels
             get { return _foodSelected; }
             set
             {
+                db.SaveChanges();
                 _foodSelected = value;
                 OnPropertyChanged();
-                Updated = (Food)FoodSelected.Clone();
+                if (isSelected == false)
+                {
+                    Updated = (Food)FoodSelected.Clone();
+                }
+                isSelected = false;
             }
         }
 
@@ -101,28 +106,16 @@ namespace FastFoodFadom.ViewModels
             get => _Coast2;
             set => Set(ref _Coast2, value);
         }
-#endregion
+        #endregion
 
         public FastFoodFandomContext db = new FastFoodFandomContext();
 
         private List<Food> _list;
 
-        public List<Food> List { 
+        public List<Food> List {
             get { return _list; }
             set { _list = value;
-                  OnPropertyChanged(nameof(List));
-            } 
-        }
-
-        private List<Food> _list2;
-
-        public List<Food> List2
-        {
-            get { return _list2; }
-            set
-            {
-                _list2 = value;
-                OnPropertyChanged(nameof(List2));
+                OnPropertyChanged(nameof(List));
             }
         }
 
@@ -202,16 +195,24 @@ namespace FastFoodFadom.ViewModels
 
         public ICommand RefreshData { get; }
 
-        private bool CanRefresh(object p) => true;
+        private bool CanRefresh(object p)
+        {
+            if (FoodSelected != null)
+            {
+                return true;
+            }
+            return false;
+        }
 
         private void OnRefreshGet(object p)
         {
             try
             {
+                Updated = (Food)FoodSelected.Clone();
                 db.SaveChanges();
                 List = db.Food.ToList();
                 db.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-            } catch(Exception Ex)
+            } catch (Exception Ex)
             {
                 MessageBox.Show(Ex.ToString());
             }
@@ -219,19 +220,44 @@ namespace FastFoodFadom.ViewModels
 
         public ICommand NullNewInDB { get; }
 
-        private bool CanNull(object p) => true;
+        private bool CanNull(object p)
+        {
+            if (FoodSelected != null)
+            {
+                return true;
+            }
+            return false;
+        }
 
         private void OnGetNull(object p)
         {
+            if (FoodSelected.Name != Updated.Name || FoodSelected.Image != Updated.Image || FoodSelected.Coast != Updated.Coast)
+            {
+                MessageBox.Show("У вас есть несохраненные изменения\nНажмите конпку Сохранить");
+                return;
+            }
+            isSelected = true;
             FoodSelected = null;
         }
 
         public ICommand DeleteData { get; }
 
-        private bool CanDelete(object p) => true;
+        private bool CanDelete(object p)
+        {
+            if( FoodSelected != null)
+            {
+                return true;
+            }
+            return false;  
+        }
 
         private void OnDeleteGet(object p)
         {
+            if (FoodSelected.Name != Updated.Name || FoodSelected.Image != Updated.Image || FoodSelected.Coast != Updated.Coast)
+            {
+                MessageBox.Show("Объект не может быть удален, так как его изменения не зафиксированы\nНажмите конпку Сохранить");
+                return;
+            }
             db.Food.Remove(FoodSelected);
             db.SaveChanges();
             db.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());

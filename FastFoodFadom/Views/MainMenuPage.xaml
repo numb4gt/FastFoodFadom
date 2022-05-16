@@ -30,7 +30,7 @@
                     </Grid.RowDefinitions>
                     <DataGrid ItemsSource="{Binding List}" AutoGenerateColumns="False" IsReadOnly="True" Grid.Column="0" x:Name="Blase" SelectedItem="{Binding FoodSelected, Mode=TwoWay}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Key" Width="70" Binding="{Binding Path=FoodId}">
+                            <DataGridTextColumn Header="Key" Width="120" Binding="{Binding Path=FoodId}">
                             </DataGridTextColumn>
 
                             <DataGridTextColumn  Header="Name" Width="300" Binding="{Binding Path=Name}">
@@ -42,7 +42,7 @@
                             <DataGridTemplateColumn Header="Image">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Image Source="{Binding Image}"  Width="150"/>
+                                        <Image Source="{Binding Image}"  Width="250"/>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
@@ -50,12 +50,7 @@
                             <DataGridTemplateColumn Width="250" Header="Button">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button x:Name="ButtumRoma" Width="150" Height="50" Background="#112D4E" CommandParameter="{Binding Name}">
-                                            <TextBlock Text="Редактировать"
-                                                       Foreground="#F9F7F7"
-                                                       FontSize="17"  FontFamily="Arial Black">
-                                            </TextBlock>
-                                        </Button>
+                                        
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
@@ -63,38 +58,28 @@
                         </DataGrid.Columns>
                     </DataGrid>
 
-                    <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="-1300,0,0,0" Command="{Binding Path=DeleteData}">
+                    <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="-1250,200,0,0" Command="{Binding Path=DeleteData}">
                         <TextBlock Text="Удалить"
                                                        Foreground="#F9F7F7"
                                                        FontSize="17"  FontFamily="Arial Black">
                         </TextBlock>
                     </Button>
 
-                    <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="-1300,200,0,0" Command="{Binding Path=AddNewInDB}">
-                        <TextBlock Text="Добавить"
+                   
+
+                    <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="-1250,80,0,0" Command="{Binding Path=RefreshData}">
+                        <TextBlock Text="Сохранить"
                                                        Foreground="#F9F7F7"
                                                        FontSize="17"  FontFamily="Arial Black">
                         </TextBlock>
                     </Button>
 
-                    <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="22,96,1321,250" Command="{Binding Path=RefreshData}">
-                        <TextBlock Text="Обновить"
-                                                       Foreground="#F9F7F7"
-                                                       FontSize="17"  FontFamily="Arial Black">
-                        </TextBlock>
-                    </Button>
-
-                    <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="22,17,1321,329" Command="{Binding Path=NullNewInDB}">
+                    <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="-1250,-40,0,0" Command="{Binding Path=NullNewInDB}">
                         <TextBlock Text="Сбросить"
                                                        Foreground="#F9F7F7"
                                                        FontSize="17"  FontFamily="Arial Black">
                         </TextBlock>
                     </Button>
-
-                    <TextBlock Text="{Binding Updated.Name, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1"
-                                      Foreground="Black"
-                                       FontSize="10"  FontFamily="Arial Black" Width="700" Height="50" Margin="1296,198,-453,148"
-                               ></TextBlock>
 
                     <Grid Background="#112D4E" Grid.Row="1" Width="1000" Height="300">
                         <Grid.ColumnDefinitions>

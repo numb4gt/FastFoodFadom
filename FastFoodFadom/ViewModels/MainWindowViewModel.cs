@@ -7,6 +7,7 @@ using Microsoft.Win32;
 using System.Windows.Input;
 using FastFoodFadom.Models;
 using System.Windows;
+using FastFoodFadom.Views.Windows;
 
 namespace FastFoodFadom.ViewModels
 {
@@ -59,6 +60,19 @@ namespace FastFoodFadom.ViewModels
             CurrentView = p;
         }
 
+        public ICommand ChangeBackCommand { get; }
+
+        private bool CanChangeBackCommandExecute(object p) => true;
+
+        private void OnChangeBackCommandExecuted(object p)
+        {
+            StartWindow main = new StartWindow();
+            main.Show();
+            
+            
+            
+        }
+
         #endregion
 
         public MainWindowViewModel()
@@ -71,6 +85,7 @@ namespace FastFoodFadom.ViewModels
             Customer = new CustomerOrderPageViewModel();
 
             ChangeViewCommand = new LamdaCommand(OnChangeViewCommandExecuted, CanChangeViewCommandExecute);
+            ChangeBackCommand = new LamdaCommand(OnChangeBackCommandExecuted, CanChangeBackCommandExecute);
             
         }
 

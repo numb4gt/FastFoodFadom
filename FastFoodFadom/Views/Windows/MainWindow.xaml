@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FastFoodFadom"
         xmlns:f="clr-namespace:FastFoodFadom.ViewModels"
         mc:Ignorable="d"
-        Title="{Binding Path=Title}" Height="1000" Width="1800"
+        Title="{Binding Path=Title}" Height="1000" Width="1800" WindowStartupLocation="CenterScreen"
          Icon="C:\Users\USER\Desktop\КП\Проект\FastFoodFadom\FastFoodFadom\Images/bnd.ico">
     <Window.Resources>
         <Style x:Key="FocusVisual">
@@ -168,7 +168,7 @@
 
                     <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/burger.png"  Width="50" Margin="24,0,177,0">
                         <Image.InputBindings>
-                            <MouseBinding Gesture="LeftClick" Command="{Binding ChangeViewCommand}" CommandParameter="{Binding Admin}"/>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding ChangeBackCommand}"/>
                         </Image.InputBindings>
                     </Image>
                 </Grid>
