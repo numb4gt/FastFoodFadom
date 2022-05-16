@@ -68,9 +68,10 @@ namespace FastFoodFadom.ViewModels
         {
             StartWindow main = new StartWindow();
             main.Show();
-            
-            
-            
+            App.Current.MainWindow.Close();
+            App.Current.MainWindow = main;
+
+
         }
 
         #endregion

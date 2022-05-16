@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:FastFoodFadom.Views.Windows"
         mc:Ignorable="d"
         xmlns:f="clr-namespace:FastFoodFadom.ViewModels"
-        Title="LoginWindow" Height="400" Width="450" WindowStartupLocation="CenterScreen">
+        Title="LoginWindow" Height="400" Width="450" WindowStartupLocation="CenterScreen"
+        Icon="C:\Users\USER\Desktop\КП\Проект\FastFoodFadom\FastFoodFadom\Images/bnd.ico">
 
     <Window.DataContext>
         <f:LoginWindowViewModel/>
@@ -78,7 +79,7 @@
         </TextBlock>
         <TextBox HorizontalAlignment="Center" Height="40" Margin="0,132,0,0" Text="login" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="26" Background="#DBE2EF" TextAlignment="Center"/>
         <TextBox HorizontalAlignment="Center" Height="40" Margin="0,177,0,0" Text="password" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="26" Background="#DBE2EF" TextAlignment="Center"/>
-        <Button Style="{DynamicResource ButtonStyle1}" Content="LogIn" Margin="0,180,0,0" Width="200" Height="50" Background="#48466D" Foreground="White"/>
+        <Button Style="{DynamicResource ButtonStyle1}" Content="LogIn" Margin="0,180,0,0" Width="200" Height="50" Background="#48466D" Foreground="White" Command="{Binding GoToAdmin}"/>
 
         <Button Height="30"
                              Width="30"
@@ -87,7 +88,7 @@
                              Command="{Binding ChangeViewOnBackWindow}" 
                              
                         >
-            <Grid Height="30" Width="30">
+            <Grid Height="20" Width="20">
                 <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/back-arrow.png" Margin="0,0,0,0"/>
 
             </Grid>

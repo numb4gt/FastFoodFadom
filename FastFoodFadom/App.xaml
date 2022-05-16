@@ -7,7 +7,8 @@
              xmlns:LoginWn="Views\Windows\LoginWindow.xaml"
              xmlns:MainWn="Views\Windows\MainWindow.xaml"
              xmlns:View="clr-namespace:FastFoodFadom.Views"
-             xmlns:ViewModel="clr-namespace:FastFoodFadom.ViewModels">
+             xmlns:ViewModel="clr-namespace:FastFoodFadom.ViewModels"
+             >
     
     <Application.Resources>
 

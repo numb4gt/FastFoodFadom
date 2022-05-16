@@ -19,6 +19,7 @@ namespace FastFoodFadom.ViewModels
             MainWindow main = new MainWindow();
             main.Show();
             App.Current.MainWindow.Close();
+            App.Current.MainWindow = main;
         }
 
 
@@ -32,6 +33,7 @@ namespace FastFoodFadom.ViewModels
             LoginWindow main = new LoginWindow();
             main.Show();
             App.Current.MainWindow.Close();
+            App.Current.MainWindow = main;
         }
 
         public StartWindowViewModel()
