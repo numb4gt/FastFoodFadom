@@ -7,11 +7,19 @@ using System.Collections.Generic;
 
 namespace FastFoodFadom.Models
 {
-    public partial class Snack
+    public partial class Snack : ICloneable
     {
         public Snack()
         {
             OrderFromMenu = new HashSet<OrderFromMenu>();
+        }
+
+        public Snack(Snack other)
+        {
+            SnackId = other.SnackId;
+            Name = other.Name;
+            Coast = other.Coast;
+            Image = other.Image;
         }
 
         public int SnackId { get; set; }
@@ -20,5 +28,10 @@ namespace FastFoodFadom.Models
         public string Image { get; set; }
 
         public virtual ICollection<OrderFromMenu> OrderFromMenu { get; set; }
+
+        public object Clone()
+        {
+            return new Snack(this);
+        }
     }
 }

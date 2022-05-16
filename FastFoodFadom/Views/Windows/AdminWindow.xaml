@@ -112,7 +112,7 @@
                         >
                     <Grid Height="170" Width="170">
                         <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/fast-food2.png"  Width="100"/>
-                        <TextBlock Text="Главные блюда"
+                        <TextBlock Text="         Food"
                                       Foreground="Black"
                                        FontSize="18"  Margin="5,145,0,0" FontFamily="Arial Black">
 
@@ -125,10 +125,10 @@
                              Background="#DBE2EF"
                              Margin="0,0,0,0"
                              Command="{Binding ChangeViewCommand}" 
-                             CommandParameter="{Binding Menu}">
+                             CommandParameter="{Binding Snack}">
                     <Grid Height="170" Width="170">
                         <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/snacks.png"  Width="100"/>
-                        <TextBlock Text="Закуски"
+                        <TextBlock Text="  Snack"
                                       Foreground="Black"
                                        FontSize="20"  Margin="37,145,0,0" FontFamily="Arial Black"></TextBlock>
                     </Grid>
@@ -139,10 +139,10 @@
                              Background="#DBE2EF"
                              Margin="0,0,0,0"
                              Command="{Binding ChangeViewCommand}" 
-                             CommandParameter="{Binding Menu}">
+                             CommandParameter="{Binding Drink}">
                     <Grid Height="170" Width="170">
                         <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/drinks.png"  Width="100"/>
-                        <TextBlock Text="Напитки"
+                        <TextBlock Text="   Drink"
                                       Foreground="Black"
                                        FontSize="20" Margin="40,145,0,0" FontFamily="Arial Black"></TextBlock>
                     </Grid>
@@ -156,15 +156,21 @@
                         Background="#112D4E">
                 <Grid Margin="0,15" Height="80">
                     
-                    <Image Source="C:\Users\USER\Desktop\КП\Проект\FastFoodFadom\FastFoodFadom/Images/back-arrow.png" Width="50" Margin="0,0,17,0">
+                    <Image Source="C:\Users\USER\Desktop\КП\Проект\FastFoodFadom\FastFoodFadom/Images/back-arrow.png" Width="50" Margin="0,0,154,0">
                         <Image.InputBindings>
                             <MouseBinding Gesture="LeftClick" Command="{Binding ChangeBackCommand}"/>
                         </Image.InputBindings>
                     </Image>
 
-                    <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/burger.png"  Width="50" Margin="24,0,177,0">
+                    <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/burger.png"  Width="50" Margin="24,0,0,0">
                         <Image.InputBindings>
-                            <MouseBinding Gesture="LeftClick" Command="{Binding NEXT}"/>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding ShowOrders}"/>
+                        </Image.InputBindings>
+                    </Image>
+
+                    <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/table.png"  Width="50" Margin="150,0,0,0">
+                        <Image.InputBindings>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding ShowTable}"/>
                         </Image.InputBindings>
                     </Image>
                 </Grid>

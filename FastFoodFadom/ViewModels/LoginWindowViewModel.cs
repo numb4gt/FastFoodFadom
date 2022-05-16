@@ -50,7 +50,7 @@ namespace FastFoodFadom.ViewModels
         private void OnChangeAdmin(object p)
         {
 
-            if (login.Length <= 30 && login.Length > 4 && password2.Length <= 30 && password2.Length > 4)
+            if (login.Length <= 30 && login.Length >= 4 && password2.Length <= 30 && password2.Length >= 4)
             {
                 var list = db.Admin.ToList();
 

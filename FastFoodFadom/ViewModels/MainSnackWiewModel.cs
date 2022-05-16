@@ -23,7 +23,7 @@ using System.Collections.ObjectModel;
 namespace FastFoodFadom.ViewModels
 {
 
-    class MainMenuPageVievModel : ViewModelBase
+    class MainSnackVievModel : ViewModelBase
     {
         private int _CodOfFood;
 
@@ -58,11 +58,11 @@ namespace FastFoodFadom.ViewModels
             set => Set(ref _Image, value);
         }
 
-        private Food _foodSelected;
+        private Snack _foodSelected;
         public bool isSelected = false;
-        public List<Food> go = new List<Food>();
+        public List<Snack> go = new List<Snack>();
 
-        public Food FoodSelected
+        public Snack FoodSelected
         {
             get { return _foodSelected; }
             set
@@ -72,13 +72,13 @@ namespace FastFoodFadom.ViewModels
                 OnPropertyChanged();
                 if (isSelected == false)
                 {
-                    Updated = (Food)FoodSelected.Clone();
+                    Updated = (Snack)FoodSelected.Clone();
                 }
                 isSelected = false;
             }
         }
 
-        private Food Updated;
+        private Snack Updated;
 
 
 
@@ -110,11 +110,14 @@ namespace FastFoodFadom.ViewModels
 
         public FastFoodFandomContext db = new FastFoodFandomContext();
 
-        private List<Food> _list;
+        private List<Snack> _list;
 
-        public List<Food> List {
+        public List<Snack> List
+        {
             get { return _list; }
-            set { _list = value;
+            set
+            {
+                _list = value;
                 OnPropertyChanged(nameof(List));
             }
         }
@@ -165,8 +168,8 @@ namespace FastFoodFadom.ViewModels
 
         private void OnGetAdd(object p)
         {
-           
-            if(CodOfFood2 == 0 || Coast2 == 0 || Name2 == null || ImageSource == "C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/no-image.png")
+
+            if (CodOfFood2 == 0 || Coast2 == 0 || Name2 == null || ImageSource == "C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/no-image.png")
             {
                 MessageBox.Show("Все элементы должны быть заполнены и соответствовать типам данных");
                 return;
@@ -179,12 +182,12 @@ namespace FastFoodFadom.ViewModels
                 return;
             }
 
-            Food dd = new Food();
+            Snack dd = new Snack();
             dd.Name = Name2;
             dd.Image = ImageSource;
-            dd.FoodId = CodOfFood2;
+            dd.SnackId = CodOfFood2;
             dd.Coast = Coast2;
-            db.Food.Add(dd);
+            db.Snack.Add(dd);
 
             try
             {
@@ -195,7 +198,7 @@ namespace FastFoodFadom.ViewModels
                 CodOfFood2 = 0;
                 ImageSource = "C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/no-image.png";
                 db.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                List = db.Food.ToList();
+                List = db.Snack.ToList();
                 ResetLastIndex();
             }
             catch (Exception ex)
@@ -220,11 +223,12 @@ namespace FastFoodFadom.ViewModels
         {
             try
             {
-                Updated = (Food)FoodSelected.Clone();
+                Updated = (Snack)FoodSelected.Clone();
                 db.SaveChanges();
-                List = db.Food.ToList();
+                List = db.Snack.ToList();
                 db.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-            } catch (Exception Ex)
+            }
+            catch (Exception Ex)
             {
                 MessageBox.Show(Ex.ToString());
             }
@@ -256,11 +260,11 @@ namespace FastFoodFadom.ViewModels
 
         private bool CanDelete(object p)
         {
-            if( FoodSelected != null)
+            if (FoodSelected != null)
             {
                 return true;
             }
-            return false;  
+            return false;
         }
 
         private void OnDeleteGet(object p)
@@ -270,24 +274,24 @@ namespace FastFoodFadom.ViewModels
                 MessageBox.Show("Объект не может быть удален, так как его изменения не зафиксированы\nНажмите конпку Сохранить");
                 return;
             }
-            db.Food.Remove(FoodSelected);
+            db.Snack.Remove(FoodSelected);
             db.SaveChanges();
             db.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-            List = db.Food.ToList();
+            List = db.Snack.ToList();
             ResetLastIndex();
         }
 
         public void ResetLastIndex()
         {
-            LastKey = db.Food.ToList().Last().FoodId + 1;
+            LastKey = db.Snack.ToList().Last().SnackId + 1;
             CodOfFood2 = LastKey;
         }
 
-        public MainMenuPageVievModel()
+        public MainSnackVievModel()
         {
 
             ResetLastIndex();
-            List = db.Food.ToList();
+            List = db.Snack.ToList();
             AddNewInDB = new LamdaCommand(OnGetAdd, CanAdd);
             ChooseImageCommand = new LamdaCommand(OnChooseImageCommandExecuted, CanChooseImageCommandExecute);
             RefreshData = new LamdaCommand(OnRefreshGet, CanRefresh);

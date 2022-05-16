@@ -35,6 +35,11 @@ namespace FastFoodFadom.ViewModels
         }
 
         public AdminOrdersPageViewModel Admin { get; set; }
+
+        public MainSnackVievModel Snack { get; set; }
+
+        public MainDrinkVievModel Drink { get; set; }
+
         public CustomerOrderPageViewModel Customer { get; set; }
         public MainMenuPageVievModel Menu { get; set; }
 
@@ -76,6 +81,25 @@ namespace FastFoodFadom.ViewModels
 
         }
 
+        public ICommand ShowTable { get; }
+
+        private bool CanShowTable(object p) => true;
+
+        private void OnShowTable(object p)
+        {
+            MessageBox.Show("Нажал");
+        }
+
+        public ICommand ShowOrders { get; }
+
+        private bool CanShowOrder(object p) => true;
+
+        private void OnShowOrder(object p)
+        {
+            MessageBox.Show("Нажал");
+        }
+
+
         #endregion
 
         public AdminWindowViewModel()
@@ -84,11 +108,16 @@ namespace FastFoodFadom.ViewModels
 
             Admin = new AdminOrdersPageViewModel();
             Menu = new MainMenuPageVievModel();
+            Drink = new MainDrinkVievModel();
+            Snack = new MainSnackVievModel();
+          
             Customer = new CustomerOrderPageViewModel();
 
             ChangeViewCommand = new LamdaCommand(OnChangeViewCommandExecuted, CanChangeViewCommandExecute);
             ChangeBackCommand = new LamdaCommand(OnChangeBackCommandExecuted, CanChangeBackCommandExecute);
 
+            ShowOrders = new LamdaCommand(OnShowOrder,CanShowOrder);
+            ShowTable = new LamdaCommand(OnShowTable, CanShowTable);
         }
 
     }

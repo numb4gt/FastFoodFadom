@@ -30,7 +30,16 @@
                 <View:CustomerOrderPage/>
             </DataTemplate>
 
-            
+            <DataTemplate DataType="{x:Type ViewModel:MainSnackVievModel}">
+                <View:Snack/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type ViewModel:MainDrinkVievModel}">
+                <View:Drink/>
+            </DataTemplate>
+
+
+
         </ResourceDictionary>
 
 
