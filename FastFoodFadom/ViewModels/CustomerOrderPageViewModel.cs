@@ -41,19 +41,21 @@ namespace FastFoodFadom.ViewModels
             }
         }
 
-
-
-
-
-
-
         public ICommand Add { get; }
 
         private bool CanAdd(object p) => true;
 
-
         private void OnAdd(object p)
         {
+
+            if(db.UserOrder.ToList().Count == 0)
+            {
+                MessageBox.Show("Ваш заказ пуст, внесите хотябы одну позицию");
+                return;
+            }
+
+
+
             var List = db.UserOrder.ToList();
             int a = 0;
             
@@ -70,11 +72,6 @@ namespace FastFoodFadom.ViewModels
                 db.SaveChanges();
                 MainCoast.Coast++;
             }
-
-            
-
-
-
 
             foreach(var item in List)
             {
@@ -96,12 +93,6 @@ namespace FastFoodFadom.ViewModels
             App.Current.MainWindow.Close();
             App.Current.MainWindow = main;
 
-
-
-
-
-
-
         }
 
 
@@ -118,7 +109,11 @@ namespace FastFoodFadom.ViewModels
 
         private void OnDelete(object p)
         {
-            MessageBox.Show("Нажал Delete");
+            db.UserOrder.Remove(FoodSelected);
+            db.SaveChanges();
+            db.ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+            List2 = db.UserOrder.ToList();
+            
         }
 
 
