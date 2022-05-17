@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="FastFoodFadom.Views.TablePage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FastFoodFadom.Views"
+             mc:Ignorable="d" 
+              xmlns:f="clr-namespace:FastFoodFadom.ViewModels"
+              d:DesignHeight="868" d:DesignWidth="1549">
+    <UserControl.DataContext>
+        <f:TablePageViewModel/>
+    </UserControl.DataContext>
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+
+        <TabControl Grid.Row="0" Grid.Column="0">
+            <TabItem Header="Reset">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="59*"/>
+                        <ColumnDefinition Width="1484*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="761*"/>
+                        <RowDefinition Height="79*"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid ItemsSource="{Binding List2}" AutoGenerateColumns="False" IsReadOnly="True" Grid.Column="0" x:Name="Blase" SelectedItem="{Binding IsSelected, Mode=TwoWay}" Grid.ColumnSpan="2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Key" Width="120" FontSize="30" Binding="{Binding Path=OrderKey}">
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn  Header="Name" Width="300" FontSize="30"  Binding="{Binding Path=Date}">
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn  Header="Coast" Width="300" FontSize="30" Binding="{Binding Path=Status}">
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn  Header="Coast" Width="300" FontSize="30" Binding="{Binding Path=Coast}">
+                            </DataGridTextColumn>
+
+
+
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+
+
+                    <Button Background="DarkSeaGreen" Grid.Column="1" Grid.Row="1" Margin="1250,0,0,0" Command="{Binding Path=MakeDone}" Width="200" Height="50">
+                        <TextBlock Text="Готово"
+                                                       Foreground="#F9F7F7"
+                                                       FontSize="17"  FontFamily="Arial Black">
+                        </TextBlock>
+                    </Button>
+
+
+
+                    <Button Background="YellowGreen" Grid.Column="1" Grid.Row="1" Margin="-1350,0,0,0" Command="{Binding Path=GetNull}" Width="200" Height="50">
+                        <TextBlock Text="Сбросить"
+                                                       Foreground="#F9F7F7"
+                                                       FontSize="17"  FontFamily="Arial Black">
+                        </TextBlock>
+                    </Button>
+
+
+
+
+
+
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="Add">
+
+                <DataGrid ItemsSource="{Binding List}" AutoGenerateColumns="False" IsReadOnly="True" Grid.Column="0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Key" Width="120" FontSize="30" Binding="{Binding Path=OrderKey}">
+                        </DataGridTextColumn>
+
+                        <DataGridTextColumn  Header="Name" Width="300" FontSize="30"  Binding="{Binding Path=NameOf}">
+                        </DataGridTextColumn>
+
+                        <DataGridTextColumn  Header="Coast" Width="300" FontSize="30" Binding="{Binding Path=Count}">
+                        </DataGridTextColumn>
+
+                        <DataGridTextColumn  Header="Coast" Width="300" FontSize="30" Binding="{Binding Path=Coast}">
+                        </DataGridTextColumn>
+
+
+
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+
+        </TabControl>
+
+    </Grid>
+</UserControl>

@@ -9,16 +9,16 @@ namespace FastFoodFadom.Models
 {
     public partial class OrderFromMenu
     {
-        public int CodOfOrder { get; set; }
-        public int? CodOfFood { get; set; }
-        public int? CodOfDrink { get; set; }
-        public int? CodOfSnack { get; set; }
-        public int Count { get; set; }
-        public int Coast { get; set; }
+        public int OrderKey { get; set; }
+        public string NameOf { get; set; }
+        public int? Count { get; set; }
+        public int? Coast { get; set; }
+        public int? SnackId { get; set; }
+        public int? FoodId { get; set; }
+        public int? Drinkid { get; set; }
 
-        public virtual Drink CodOfDrinkNavigation { get; set; }
-        public virtual Food CodOfFoodNavigation { get; set; }
-        public virtual Snack CodOfSnackNavigation { get; set; }
-        public virtual Orders Orders { get; set; }
+        public virtual Drink Drink { get; set; }
+        public virtual Food Food { get; set; }
+        public virtual Snack Snack { get; set; }
     }
 }

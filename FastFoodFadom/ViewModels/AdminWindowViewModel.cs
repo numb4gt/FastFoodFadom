@@ -40,6 +40,10 @@ namespace FastFoodFadom.ViewModels
 
         public MainDrinkVievModel Drink { get; set; }
 
+        public TablePageViewModel Table { get; set; }
+
+        public InteractiveTabloViewModel Tablo { get; set; }
+
         public CustomerOrderPageViewModel Customer { get; set; }
         public MainMenuPageVievModel Menu { get; set; }
 
@@ -110,6 +114,9 @@ namespace FastFoodFadom.ViewModels
             Menu = new MainMenuPageVievModel();
             Drink = new MainDrinkVievModel();
             Snack = new MainSnackVievModel();
+
+            Table = new TablePageViewModel();
+            Tablo = new InteractiveTabloViewModel();
           
             Customer = new CustomerOrderPageViewModel();
 

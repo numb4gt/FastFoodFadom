@@ -108,7 +108,7 @@
                              Background="#DBE2EF"
                              Margin="0,0,0,0"
                              Command="{Binding ChangeViewCommand}" 
-                             CommandParameter="{Binding Menu}"
+                             CommandParameter="{Binding Food}"
                         >
                     <Grid Height="170" Width="170">
                         <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/fast-food2.png"  Width="100"/>
@@ -125,7 +125,7 @@
                              Background="#DBE2EF"
                              Margin="0,0,0,0"
                              Command="{Binding ChangeViewCommand}" 
-                             CommandParameter="{Binding Menu}">
+                             CommandParameter="{Binding Snack}">
                     <Grid Height="170" Width="170">
                         <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/snacks.png"  Width="100"/>
                         <TextBlock Text="Закуски"
@@ -139,7 +139,7 @@
                              Background="#DBE2EF"
                              Margin="0,0,0,0"
                              Command="{Binding ChangeViewCommand}" 
-                             CommandParameter="{Binding Menu}">
+                             CommandParameter="{Binding Drink}">
                     <Grid Height="170" Width="170">
                         <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/drinks.png"  Width="100"/>
                         <TextBlock Text="Напитки"
@@ -189,29 +189,16 @@
                     <Button Style="{DynamicResource ButtonRadiusRound}" Height="70"
                              Width="300"
                              Background="#DBE2EF"
-                             Margin="800,0,0,0"
-                            Command="{Binding ChangeViewCommand}" 
-                             CommandParameter="{Binding Customer}">
+                             Margin="1200,0,0,0"
+                            Command="{Binding ChangeViewCommand}" CommandParameter="{Binding Customer}" 
+                             >
                         <TextBlock Text="Ваш заказ"
                                       Foreground="Black"
                                        FontSize="40"  FontFamily="Arial Black"
                                ></TextBlock>
                     </Button>
 
-                    <Button Style="{DynamicResource ButtonRadiusRound}" Height="70"
-                             Width="200"
-                             Background="#DBE2EF"
-                             Margin="1330,0,0,0"
-                            Command="{Binding ChangeViewCommand}" 
-                             CommandParameter="{Binding Customer}"
-                            >
-                        <TextBlock Text="{Binding Path=Coast, UpdateSourceTrigger=PropertyChanged}"
-                                      Foreground="Black"
-                                       FontSize="40"  FontFamily="Arial Black"
-                               ></TextBlock>
-                    </Button>
 
-                    
 
                 </Grid>
 

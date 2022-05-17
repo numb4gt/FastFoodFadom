@@ -10,13 +10,27 @@ namespace FastFoodFadom.Models
     internal class MainCoast
     {
    
-        public static int Coast = 5;
+        public static int Coast = 1;
 
         public static int CoastGo(int value)
         {
             Coast += value;
             return Coast;
         }
+
+        public static int Coast2 = 1;
+
+        public static int CoastGo2(int value)
+        {
+            Coast2 += value;
+            return Coast2;
+        }
+
+
+
+
+
+
 
     }
 }

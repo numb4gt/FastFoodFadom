@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Input;
 using FastFoodFadom.Infrastucture.Commands;
 using FastFoodFadom.Views.Windows;
+using FastFoodFadom.Models;
 
 namespace FastFoodFadom.ViewModels
 {
@@ -22,7 +23,7 @@ namespace FastFoodFadom.ViewModels
             App.Current.MainWindow = main;
         }
 
-
+        FastFoodFandomContext db = new FastFoodFandomContext();
 
         public ICommand ChangeViewOnLoginWindow { get; }
 
@@ -36,8 +37,30 @@ namespace FastFoodFadom.ViewModels
             App.Current.MainWindow = main;
         }
 
+        public ICommand Change { get; }
+
+        private bool CanChange(object p) => true;
+
+        private void OnChange(object p)
+        {
+            db.Order.RemoveRange(db.Order);
+            db.SaveChanges();
+
+            db.OrderFromMenu.RemoveRange(db.OrderFromMenu);
+            db.SaveChanges();
+        }
+
+
+
+
+
+
         public StartWindowViewModel()
         {
+
+            db.UserOrder.RemoveRange(db.UserOrder);
+            db.SaveChanges();
+            Change = new LamdaCommand(OnChange,CanChange);
             ChangeViewOnLoginWindow = new LamdaCommand(OnChangeViewOnLoginWindow,CanChangeViewOnLoginWindow);
             ChangeViewOnMainWindow = new LamdaCommand(OnChangeViewOnMainWindow,CanChangeViewOnMainWindow);
         }

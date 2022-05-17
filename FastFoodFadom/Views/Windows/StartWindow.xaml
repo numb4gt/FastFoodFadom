@@ -52,5 +52,19 @@
 
         </Button>
 
+        <Button Height="50"
+                             Width="50"
+                             Background="#DBE2EF"
+                             Margin="-370,550,0,0"
+                             Command="{Binding Change}" 
+                             
+                        >
+            <Grid Height="40" Width="40">
+                <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/man.png" Margin="0,0,0,0"/>
+
+            </Grid>
+
+        </Button>
+
     </Grid>
 </Window>

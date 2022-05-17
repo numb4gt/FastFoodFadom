@@ -7,9 +7,11 @@ using System.Collections.Generic;
 
 namespace FastFoodFadom.Models
 {
-    public partial class Admin
+    public partial class Order
     {
-        public string Login { get; set; }
-        public string Password { get; set; }
+        public int OrderKey { get; set; }
+        public string Date { get; set; }
+        public string Status { get; set; }
+        public string Coast { get; set; }
     }
 }

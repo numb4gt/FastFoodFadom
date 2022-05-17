@@ -31,10 +31,15 @@ namespace FastFoodFadom.ViewModels
             set => Set(ref _Coast, value);
         }
 
-        public AdminOrdersPageViewModel Admin { get; set; }
         public CustomerOrderPageViewModel Customer { get; set; }
         public MainInfoPageViewModel Info { get; set; }
-        public MainMenuPageVievModel Menu { get; set; }
+
+        public DrinkPageViewModel Drink { get; set; }
+
+        public SnackPageViewModel Snack { get; set; }
+
+        public FoodPageViewModel Food { get; set; }
+        
 
         private object _currentView = new MainInfoPageViewModel();
         public object CurrentView
@@ -79,14 +84,16 @@ namespace FastFoodFadom.ViewModels
         public MainWindowViewModel()
         {
             Coast = MainCoast.Coast;
-            
-            Admin = new AdminOrdersPageViewModel();
-            Menu = new MainMenuPageVievModel();
+
+            Drink = new DrinkPageViewModel();
+            Food = new FoodPageViewModel();
+            Snack = new SnackPageViewModel();
             Info = new MainInfoPageViewModel();
             Customer = new CustomerOrderPageViewModel();
 
             ChangeViewCommand = new LamdaCommand(OnChangeViewCommandExecuted, CanChangeViewCommandExecute);
             ChangeBackCommand = new LamdaCommand(OnChangeBackCommandExecuted, CanChangeBackCommandExecute);
+           
             
         }
 

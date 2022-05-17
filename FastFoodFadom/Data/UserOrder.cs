@@ -7,13 +7,12 @@ using System.Collections.Generic;
 
 namespace FastFoodFadom.Models
 {
-    public partial class Orders
+    public partial class UserOrder
     {
-        public int CodOfOrder { get; set; }
-        public DateTime? Date { get; set; }
-        public int? Coast { get; set; }
-        public string Status { get; set; }
-
-        public virtual OrderFromMenu CodOfOrderNavigation { get; set; }
+        public int OrderKey { get; set; }
+        public string Name { get; set; }
+        public string HowMach { get; set; }
+        public string Coast { get; set; }
+        public int? FoodKey { get; set; }
     }
 }

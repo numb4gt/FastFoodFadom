@@ -164,13 +164,15 @@
 
                     <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/burger.png"  Width="50" Margin="24,0,0,0">
                         <Image.InputBindings>
-                            <MouseBinding Gesture="LeftClick" Command="{Binding ShowOrders}"/>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding ChangeViewCommand}" 
+                             CommandParameter="{Binding Table}"/>
                         </Image.InputBindings>
                     </Image>
 
                     <Image Source="C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/table.png"  Width="50" Margin="150,0,0,0">
                         <Image.InputBindings>
-                            <MouseBinding Gesture="LeftClick" Command="{Binding ShowTable}"/>
+                            <MouseBinding Gesture="LeftClick" Command="{Binding ChangeViewCommand}" 
+                             CommandParameter="{Binding Tablo}"/>
                         </Image.InputBindings>
                     </Image>
                 </Grid>

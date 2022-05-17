@@ -39,6 +39,29 @@
             </DataTemplate>
 
 
+            <DataTemplate DataType="{x:Type ViewModel:FoodPageViewModel}">
+                <View:FoodPage/>
+            </DataTemplate>
+
+
+            <DataTemplate DataType="{x:Type ViewModel:SnackPageViewModel}">
+                <View:SnackPage/>
+            </DataTemplate>
+
+
+            <DataTemplate DataType="{x:Type ViewModel:DrinkPageViewModel}">
+                <View:DrinkPage/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type ViewModel:InteractiveTabloViewModel}">
+                <View:InteractiveTabloPage/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type ViewModel:TablePageViewModel}">
+                <View:TablePage/>
+            </DataTemplate>
+
+
 
         </ResourceDictionary>
 

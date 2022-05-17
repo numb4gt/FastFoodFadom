@@ -22,9 +22,10 @@ namespace FastFoodFadom.Models
         public virtual DbSet<Admin> Admin { get; set; }
         public virtual DbSet<Drink> Drink { get; set; }
         public virtual DbSet<Food> Food { get; set; }
+        public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<OrderFromMenu> OrderFromMenu { get; set; }
-        public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<Snack> Snack { get; set; }
+        public virtual DbSet<UserOrder> UserOrder { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -77,53 +78,41 @@ namespace FastFoodFadom.Models
                     .HasMaxLength(30);
             });
 
-            modelBuilder.Entity<OrderFromMenu>(entity =>
+            modelBuilder.Entity<Order>(entity =>
             {
-                entity.HasKey(e => e.CodOfOrder);
+                entity.HasKey(e => e.OrderKey);
 
-                entity.Property(e => e.CodOfOrder)
-                    .HasColumnName("Cod_of_order")
-                    .ValueGeneratedNever();
+                entity.Property(e => e.OrderKey).ValueGeneratedNever();
 
-                entity.Property(e => e.CodOfDrink).HasColumnName("Cod_of_drink");
+                entity.Property(e => e.Coast).HasMaxLength(50);
 
-                entity.Property(e => e.CodOfFood).HasColumnName("Cod_of_food");
+                entity.Property(e => e.Date).HasMaxLength(50);
 
-                entity.Property(e => e.CodOfSnack).HasColumnName("Cod_of_snack");
-
-                entity.HasOne(d => d.CodOfDrinkNavigation)
-                    .WithMany(p => p.OrderFromMenu)
-                    .HasForeignKey(d => d.CodOfDrink)
-                    .HasConstraintName("FK_OrderFromMenu_Drink");
-
-                entity.HasOne(d => d.CodOfFoodNavigation)
-                    .WithMany(p => p.OrderFromMenu)
-                    .HasForeignKey(d => d.CodOfFood)
-                    .HasConstraintName("FK_OrderFromMenu_Food");
-
-                entity.HasOne(d => d.CodOfSnackNavigation)
-                    .WithMany(p => p.OrderFromMenu)
-                    .HasForeignKey(d => d.CodOfSnack)
-                    .HasConstraintName("FK_OrderFromMenu_Snack");
+                entity.Property(e => e.Status).HasMaxLength(50);
             });
 
-            modelBuilder.Entity<Orders>(entity =>
+            modelBuilder.Entity<OrderFromMenu>(entity =>
             {
-                entity.HasKey(e => e.CodOfOrder);
+                entity.HasKey(e => e.OrderKey);
 
-                entity.Property(e => e.CodOfOrder)
-                    .HasColumnName("Cod_of_order")
-                    .ValueGeneratedNever();
+                entity.Property(e => e.OrderKey).ValueGeneratedNever();
 
-                entity.Property(e => e.Date).HasColumnType("date");
+                entity.Property(e => e.NameOf).HasMaxLength(50);
 
-                entity.Property(e => e.Status).HasMaxLength(30);
+                entity.HasOne(d => d.Drink)
+                    .WithMany(p => p.OrderFromMenu)
+                    .HasForeignKey(d => d.Drinkid)
+                    .HasConstraintName("FK_OrderFromMenu_Drink");
 
-                entity.HasOne(d => d.CodOfOrderNavigation)
-                    .WithOne(p => p.Orders)
-                    .HasForeignKey<Orders>(d => d.CodOfOrder)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Orders_OrderFromMenu");
+                entity.HasOne(d => d.Food)
+                    .WithMany(p => p.OrderFromMenu)
+                    .HasForeignKey(d => d.FoodId)
+                    .HasConstraintName("FK_OrderFromMenu_Food");
+
+                entity.HasOne(d => d.Snack)
+                    .WithMany(p => p.OrderFromMenu)
+                    .HasForeignKey(d => d.SnackId)
+                    .HasConstraintName("FK_OrderFromMenu_Snack");
             });
 
             modelBuilder.Entity<Snack>(entity =>
@@ -133,6 +122,25 @@ namespace FastFoodFadom.Models
                 entity.Property(e => e.Image)
                     .IsRequired()
                     .HasMaxLength(100);
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<UserOrder>(entity =>
+            {
+                entity.HasKey(e => e.OrderKey);
+
+                entity.Property(e => e.OrderKey).ValueGeneratedNever();
+
+                entity.Property(e => e.Coast)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.HowMach)
+                    .IsRequired()
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.Name)
                     .IsRequired()
