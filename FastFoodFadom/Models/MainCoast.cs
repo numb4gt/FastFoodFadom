@@ -26,11 +26,13 @@ namespace FastFoodFadom.Models
             return Coast2;
         }
 
+        public static int Coast3 = 1;
 
-
-
-
-
+        public static int CoastGo3(int value)
+        {
+            Coast2 += value;
+            return Coast2;
+        }
 
     }
 }

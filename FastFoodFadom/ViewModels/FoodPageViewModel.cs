@@ -12,42 +12,7 @@ namespace FastFoodFadom.ViewModels
 {
     class FoodPageViewModel : ViewModelBase
     {
-        private int _CodOfFood;
-
-
-        public int CodOfFood
-        {
-            get => _CodOfFood;
-            set => Set(ref _CodOfFood, value);
-        }
-
-        private string _Name;
-
-        public string Name
-        {
-            get => _Name;
-            set => Set(ref _Name, value);
-        }
-
-        private int _Coast;
-
-        public int Coast
-        {
-            get => _Coast;
-            set => Set(ref _Coast, value);
-        }
-
-        private string _Image;
-
-        public string Image
-        {
-            get => _Image;
-            set => Set(ref _Image, value);
-        }
-
         private Food _foodSelected;
-        public bool isSelected = false;
-        public List<Food> go = new List<Food>();
 
         public Food FoodSelected
         {
@@ -57,15 +22,9 @@ namespace FastFoodFadom.ViewModels
                 HowMach = 1;
                 _foodSelected = value;
                 OnPropertyChanged();
-                if (isSelected == false)
-                {
-                    Updated = (Food)FoodSelected.Clone();
-                }
-                isSelected = false;
             }
         }
 
-        private Food Updated;
 
         private int _HowMach;
 
@@ -90,15 +49,6 @@ namespace FastFoodFadom.ViewModels
             }
         }
 
-        private string _ImageSource = "C:/Users/USER/Desktop/КП/Проект/FastFoodFadom/FastFoodFadom/Images/no-image.png";
-
-        /// <summary>Заголовок окна</summary>
-        public string ImageSource
-        {
-            get => _ImageSource;
-            set => Set(ref _ImageSource, value);
-        }
-
         public ICommand AddToList { get; }
 
         private bool CanAddToList(object p)
@@ -116,20 +66,16 @@ namespace FastFoodFadom.ViewModels
         {
             try
             {
-                ListOrder arder = new ListOrder(FoodSelected.FoodId, FoodSelected, null, null, HowMach, FoodSelected.Coast * HowMach);
-                ListPr.order.Add(arder);
-
-
                 var toCustomer = new UserOrder();
 
                 toCustomer.Name = FoodSelected.Name;
-                toCustomer.OrderKey = FoodSelected.FoodId;
+                toCustomer.OrderKey = MainCoast.Coast3;
                 toCustomer.HowMach = HowMach.ToString();
                 toCustomer.Coast = (FoodSelected.Coast * HowMach).ToString();
 
                 db.UserOrder.Add(toCustomer);
                 db.SaveChanges();
-               
+                MainCoast.Coast3++;
             }
             catch (Exception ex)
             {
@@ -150,37 +96,14 @@ namespace FastFoodFadom.ViewModels
 
         private void OnGetNull(object p)
         {
-            if (FoodSelected.Name != Updated.Name || FoodSelected.Image != Updated.Image || FoodSelected.Coast != Updated.Coast)
-            {
-                MessageBox.Show("У вас есть несохраненные изменения\nНажмите конпку Сохранить");
-                return;
-            }
-            isSelected = true;
             FoodSelected = null;
         }
-
-
-
-        public ICommand Add { get; }
-
-        private bool Can(object p) => true;
-        
-
-        private void On(object p)
-        {
-                MessageBox.Show(ListPr.order[0]._food.Name.ToString());
-        }
-
-
-
-
 
         public FoodPageViewModel()
         {
             List = db.Food.ToList();
             AddToList = new LamdaCommand(OnAddToList, CanAddToList);
             NullNewInDB = new LamdaCommand(OnGetNull, CanNull);
-            Add = new LamdaCommand(On, Can);
         }
 
    

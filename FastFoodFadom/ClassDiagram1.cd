@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="FastFoodFadom.Models.Admin" Collapsed="true">
-    <Position X="41.25" Y="0.5" Width="1.5" />
+    <Position X="32.25" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAA=</HashCode>
       <FileName>Data\Admin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.Models.Drink" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="50" Y="0.5" Width="1.5" />
+    <Position X="41" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEAAAAgAAQAAAAAABAAAAAAAAAAgBA=</HashCode>
       <FileName>Data\Drink.cs</FileName>
@@ -16,14 +16,14 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Models.FastFoodFandomContext" Collapsed="true">
-    <Position X="44.75" Y="1.5" Width="1.5" />
+    <Position X="35.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEgAAAAAQgQAAEAAAAAAQAAEAAAAAAAAEAAAgAAAAA=</HashCode>
       <FileName>Data\FastFoodFandomContext.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.Models.Food" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="46.5" Y="1.5" Width="1.5" />
+    <Position X="37.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEAAAAgAAQAQAAAABAAAAAAAAAAABA=</HashCode>
       <FileName>Data\Food.cs</FileName>
@@ -31,21 +31,21 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Models.Order" Collapsed="true">
-    <Position X="41.25" Y="3.5" Width="1.5" />
+    <Position X="32.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAEAAAAAgAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>Data\Order.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.Models.OrderFromMenu" Collapsed="true">
-    <Position X="43" Y="3.5" Width="1.5" />
+    <Position X="34" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAgAAEIAAAAgCAQAQAAAAAAAAAAAAgAAgAA=</HashCode>
       <FileName>Data\OrderFromMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.Models.Snack" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="46.5" Y="3.5" Width="1.5" />
+    <Position X="37.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAMAAAAgAAQAAAAAABAAAAAAAAAAABA=</HashCode>
       <FileName>Data\Snack.cs</FileName>
@@ -53,14 +53,14 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Models.UserOrder" Collapsed="true">
-    <Position X="43" Y="4.5" Width="1.5" />
+    <Position X="34" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAAAAEAAAAAgAAQAAAAAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>Data\UserOrder.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.Models.ListOrder" Collapsed="true">
-    <Position X="41.25" Y="2.5" Width="1.5" />
+    <Position X="32.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQBAAAgAAQAAAAAAABAAAAAAAAAABA=</HashCode>
       <FileName>Models\ListOrder.cs</FileName>
@@ -74,14 +74,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.Models.MainCoast" Collapsed="true">
-    <Position X="44.75" Y="2.5" Width="1.5" />
+    <Position X="35.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQgAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
       <FileName>Models\MainCoast.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.Infrastucture.Commands.Base.Command" Collapsed="true">
-    <Position X="3" Y="0.75" Width="1.5" />
+    <Position X="11.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Infrastucture\Commands\Base\Command.cs</FileName>
@@ -89,7 +89,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="FastFoodFadom.Infrastucture.Commands.LamdaCommand" Collapsed="true">
-    <Position X="3" Y="3.5" Width="1.5" />
+    <Position X="11.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAQCAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Infrastucture\Commands\LamdaCommand.cs</FileName>
@@ -104,14 +104,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="FastFoodFadom.ViewModels.AdminOrdersPageViewModel" Collapsed="true">
-    <Position X="5" Y="1.75" Width="1.5" />
+    <Position X="14" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAUAAABAEAAQAAIAAAAAAAgAABAAAAAAAAAAIgAEEAA=</HashCode>
       <FileName>ViewModels\AdminOrdersPageViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.ViewModels.AdminWindowViewModel" Collapsed="true">
-    <Position X="11.75" Y="1.75" Width="1.5" />
+    <Position X="20.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEgAEICAAiQAEAAEAEwQQAAEJQYAAAAEgAAAIAAgAA=</HashCode>
       <FileName>ViewModels\AdminWindowViewModel.cs</FileName>
@@ -127,33 +127,33 @@
   <Class Name="FastFoodFadom.ViewModels.DrinkPageViewModel" Collapsed="true">
     <Position X="23" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAAAACIABAAQAAAAAAAAAAAAQCAAAAAAQABAAsAAAAI=</HashCode>
       <FileName>ViewModels\DrinkPageViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.ViewModels.FoodPageViewModel" Collapsed="true">
     <Position X="27.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAIgACIQBAQQAAAAAAEwJAQAQDAAABQgQABAAsAAAII=</HashCode>
+      <HashCode>EAAAACIABAAQAAAAAAAAAAAAQCAAAAAAQABAAsAAAAI=</HashCode>
       <FileName>ViewModels\FoodPageViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.ViewModels.InteractiveTabloViewModel" Collapsed="true">
-    <Position X="32" Y="1.75" Width="1.5" />
+    <Position X="23" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAEAAAAAQGAAAAAAAAA=</HashCode>
       <FileName>ViewModels\InteractiveTabloViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.ViewModels.LoginWindowViewModel" Collapsed="true">
-    <Position X="36.5" Y="1.75" Width="1.5" />
+    <Position X="27.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAUAAAAAAAAQgAAAAAAAAAAYAACABAAAAAAAIgAAEAA=</HashCode>
       <FileName>ViewModels\LoginWindowViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.ViewModels.MainDrinkVievModel" Collapsed="true">
-    <Position X="7.25" Y="1.75" Width="1.5" />
+    <Position X="16.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>kAAwQAEQBCAQwBAAAEEwJMQACDAAAFQgQEABAoAQAAI=</HashCode>
       <FileName>ViewModels\MainDrinkViewModel.cs</FileName>
@@ -188,28 +188,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.ViewModels.SnackPageViewModel" Collapsed="true">
-    <Position X="34.25" Y="1.75" Width="1.5" />
+    <Position X="25.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAAAACIABAAQAAAAAAAAAAAAQCAAAAAAQABAAsAAAAI=</HashCode>
       <FileName>ViewModels\SnackPageViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.ViewModels.StartWindowViewModel" Collapsed="true">
-    <Position X="38.75" Y="1.75" Width="1.5" />
+    <Position X="29.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAABAAQBQAQAAAAAAAAAAAAAAAgQAAAAAAAAAIEA=</HashCode>
       <FileName>ViewModels\StartWindowViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.ViewModels.TablePageViewModel" Collapsed="true">
-    <Position X="9.5" Y="1.75" Width="1.5" />
+    <Position X="18.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIQEAAAAAAAAACAAAAAAAAAQCgQAJACAAI=</HashCode>
       <FileName>ViewModels\TablePageViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.Views.Windows.AdminWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="44.75" Y="0.5" Width="1.5" />
+    <Position X="35.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\Windows\AdminWindow.xaml.cs</FileName>
@@ -217,7 +217,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Views.Windows.LoginWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="43" Y="2.5" Width="1.5" />
+    <Position X="34" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\Windows\LoginWindow.xaml.cs</FileName>
@@ -225,7 +225,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Views.Windows.StartWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="50" Y="3.5" Width="1.5" />
+    <Position X="41" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\Windows\StartWindow.xaml.cs</FileName>
@@ -233,7 +233,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="50" Y="2.5" Width="1.5" />
+    <Position X="41" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\Windows\MainWindow.xaml.cs</FileName>
@@ -241,14 +241,14 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.App" Collapsed="true">
-    <Position X="46.5" Y="0.5" Width="1.5" />
+    <Position X="37.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>App.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FastFoodFadom.Views.AdminOrdersPage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="43" Y="0.5" Width="1.5" />
+    <Position X="34" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\AdminOrdersPage.xaml.cs</FileName>
@@ -256,7 +256,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Views.CustomerOrderPage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="48.25" Y="0.5" Width="1.5" />
+    <Position X="39.25" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\CustomerOrderPage.xaml.cs</FileName>
@@ -264,7 +264,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Views.Drink" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="41.25" Y="1.5" Width="1.5" />
+    <Position X="32.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\Drink.xaml.cs</FileName>
@@ -272,7 +272,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Views.DrinkPage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="43" Y="1.5" Width="1.5" />
+    <Position X="34" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\DrinkPage.xaml.cs</FileName>
@@ -280,7 +280,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Views.FoodPage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="48.25" Y="1.5" Width="1.5" />
+    <Position X="39.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\FoodPage.xaml.cs</FileName>
@@ -288,7 +288,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Views.InteractiveTabloPage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="50" Y="1.5" Width="1.5" />
+    <Position X="41" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\InteractiveTabloPage.xaml.cs</FileName>
@@ -296,7 +296,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Views.MainInfo" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="46.5" Y="2.5" Width="1.5" />
+    <Position X="37.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\MainInfoPage.xaml.cs</FileName>
@@ -304,7 +304,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Views.MainMenuPage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="48.25" Y="2.5" Width="1.5" />
+    <Position X="39.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\MainMenuPage.xaml.cs</FileName>
@@ -312,7 +312,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Views.Snack" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="44.75" Y="3.5" Width="1.5" />
+    <Position X="35.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\Snack.xaml.cs</FileName>
@@ -320,7 +320,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Views.SnackPage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="48.25" Y="3.5" Width="1.5" />
+    <Position X="39.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\SnackPage.xaml.cs</FileName>
@@ -328,7 +328,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="FastFoodFadom.Views.TablePage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="41.25" Y="4.5" Width="1.5" />
+    <Position X="32.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\TablePage.xaml.cs</FileName>

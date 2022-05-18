@@ -63,12 +63,17 @@ namespace FastFoodFadom.ViewModels
 
         private void OnMakeDone(object p)
         {
+            if (IsSelected == null)
+            {
+                MessageBox.Show("Выберите заказ");
+                return;
+            }
+
             if (IsSelected.Status == "Готов")
             {
                 MessageBox.Show("Заказ уже готов");
                 return;
             }
-
 
             IsSelected.Status = "Готов";
             db.SaveChanges();
@@ -105,10 +110,6 @@ namespace FastFoodFadom.ViewModels
             MakeDone = new LamdaCommand(OnMakeDone, CanMakeDone);
             GetNull = new LamdaCommand(OnGetNull, CanGetNull);
         }
-
-
-
-
 
     }
 }

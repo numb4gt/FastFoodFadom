@@ -57,7 +57,7 @@ namespace FastFoodFadom.ViewModels
 
         public StartWindowViewModel()
         {
-
+            MainCoast.Coast3 = 1;
             db.UserOrder.RemoveRange(db.UserOrder);
             db.SaveChanges();
             Change = new LamdaCommand(OnChange,CanChange);

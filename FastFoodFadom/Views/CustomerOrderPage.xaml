@@ -20,39 +20,33 @@
 
         <DataGrid ItemsSource="{Binding List2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="#DBE2EF" AutoGenerateColumns="False" IsReadOnly="True" Width="1400" Height="700"   SelectedItem="{Binding FoodSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Key" Width="30" FontSize="20" Binding="{Binding Key ,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <DataGridTextColumn Header="Key" Width="30" FontSize="20" Binding="{Binding Path=OrderKey,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                 </DataGridTextColumn>
 
                 <DataGridTextColumn  Header="food" Width="200" FontSize="20" Foreground="Black"  Binding="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                 </DataGridTextColumn>
 
 
-                <DataGridTextColumn  Header="count" Width="200" FontSize="10" Binding="{Binding Path=HowMach, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <DataGridTextColumn  Header="count" Width="200" FontSize="20" Binding="{Binding Path=HowMach, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                 </DataGridTextColumn>
 
-                <DataGridTextColumn  Header="coast" Width="200" FontSize="10" Binding="{Binding Path=Coast, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <DataGridTextColumn  Header="coast" Width="200" FontSize="20" Binding="{Binding Path=Coast, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                 </DataGridTextColumn>
 
-                <DataGridTemplateColumn Width="250" Header="Button">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding _food.Name}"></TextBlock>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+                
 
             </DataGrid.Columns>
         </DataGrid>
 
 
-        <Button Background="DarkOliveGreen" Grid.Column="0" Width="200" Height="50" Margin="1274,780,75,10" Command="{Binding Path=Add}">
+        <Button Background="DarkOliveGreen" Grid.Column="0" Width="200" Height="50" Margin="1200,780,0,0" Command="{Binding Path=Add}">
             <TextBlock Text="Готово"
                                                        Foreground="#F9F7F7"
                                                        FontSize="17"  FontFamily="Arial Black">
             </TextBlock>
         </Button>
 
-        <Button Background="PaleVioletRed" Grid.Column="0" Width="200" Height="50" Margin="-1114,780,75,10" Command="{Binding Path=Delete}">
+        <Button Background="PaleVioletRed" Grid.Column="0" Width="200" Height="50" Margin="-1200,780,0,0" Command="{Binding Path=Delete}">
             <TextBlock Text="Удалить"
                                                        Foreground="#F9F7F7"
                                                        FontSize="17"  FontFamily="Arial Black">
