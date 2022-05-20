@@ -74,9 +74,9 @@ namespace FastFoodFadom.ViewModels
             foreach (var item in List)
             {
                 order1.OrderKey = MainCoast.Coast;
-                order1.NameOf = item.Name + "   " + MainCoast.Coast2.ToString();
+                order1.NameOf = item.Name;
                 order1.Count = Convert.ToInt32(item.HowMach);
-                order1.Coast = Convert.ToInt32(item.Coast);
+                order1.Coast = MainCoast.Coast2;
                 db.OrderFromMenu.Add(order1);
                 db.SaveChanges();
                 MainCoast.Coast++;

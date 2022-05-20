@@ -22,7 +22,7 @@
 
 
         <TabControl Grid.Row="0" Grid.Column="0">
-            <TabItem Header="Reset">
+            <TabItem Header="Order">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="59*"/>
@@ -37,10 +37,10 @@
                             <DataGridTextColumn Header="Key" Width="120" FontSize="30" Binding="{Binding Path=OrderKey}">
                             </DataGridTextColumn>
 
-                            <DataGridTextColumn  Header="Name" Width="300" FontSize="30"  Binding="{Binding Path=Date}">
+                            <DataGridTextColumn  Header="Date" Width="300" FontSize="30"  Binding="{Binding Path=Date}">
                             </DataGridTextColumn>
 
-                            <DataGridTextColumn  Header="Coast" Width="300" FontSize="30" Binding="{Binding Path=Status}">
+                            <DataGridTextColumn  Header="Status" Width="300" FontSize="30" Binding="{Binding Path=Status}">
                             </DataGridTextColumn>
 
                             <DataGridTextColumn  Header="Coast" Width="300" FontSize="30" Binding="{Binding Path=Coast}">
@@ -79,7 +79,7 @@
 
             </TabItem>
 
-            <TabItem Header="Add">
+            <TabItem Header="OrderFromMenu">
 
                 <DataGrid ItemsSource="{Binding List}" AutoGenerateColumns="False" IsReadOnly="True" Grid.Column="0">
                     <DataGrid.Columns>
@@ -89,10 +89,10 @@
                         <DataGridTextColumn  Header="Name" Width="300" FontSize="30"  Binding="{Binding Path=NameOf}">
                         </DataGridTextColumn>
 
-                        <DataGridTextColumn  Header="Coast" Width="300" FontSize="30" Binding="{Binding Path=Count}">
+                        <DataGridTextColumn  Header="Count" Width="300" FontSize="30" Binding="{Binding Path=Count}">
                         </DataGridTextColumn>
 
-                        <DataGridTextColumn  Header="Coast" Width="300" FontSize="30" Binding="{Binding Path=Coast}">
+                        <DataGridTextColumn  Header="OrderNumber" Width="300" FontSize="30" Binding="{Binding Path=Coast}">
                         </DataGridTextColumn>
 
 
