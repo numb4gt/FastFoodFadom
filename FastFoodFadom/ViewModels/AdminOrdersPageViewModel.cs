@@ -109,12 +109,7 @@ namespace FastFoodFadom.ViewModels
 
         public AdminOrdersPageViewModel()
         {
-
             Registration = new LamdaCommand(OnRegistration, CanRegistration);
-
-
-
-
         }
 
 

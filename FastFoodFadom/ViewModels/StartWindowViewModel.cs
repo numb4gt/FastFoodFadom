@@ -48,11 +48,18 @@ namespace FastFoodFadom.ViewModels
             //NavigationService.Navigate(New Uri("/page2.xaml", UriKind.Relative)
             //Process.Start("https://app.diagrams.net/");
 
-            db.OrderFromMenu.RemoveRange(db.OrderFromMenu);
-            db.SaveChanges();
 
-            db.Order.RemoveRange(db.Order);
-            db.SaveChanges();
+
+            Process.Start(new ProcessStartInfo("cmd", $"/c start https://eda.yandex.by/minsk?shippingType=delivery&utm_campaign=71992271.%5BEDA%5DDT_BR-goal_BY-HM-MIN_brand_restype-search_NU.460&utm_content=&utm_medium=cpc&utm_source=yasearch&utm_term=%D1%8F%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%20%D0%B5%D0%B4%D0%B0%7Cpid%7C37012633128%7Caid%7C11843735974&yadclid=91361046&yadordid=171992271&yclid=7712555836419866623")
+            {
+                CreateNoWindow = true
+            });
+
+            //db.OrderFromMenu.RemoveRange(db.OrderFromMenu);
+            //db.SaveChanges();
+
+            //db.Order.RemoveRange(db.Order);
+            //db.SaveChanges();
         }
 
 
