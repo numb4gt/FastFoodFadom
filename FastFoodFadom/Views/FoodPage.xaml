@@ -112,7 +112,7 @@
 
                         <TextBlock Grid.Column="1"  Width="300" Background="White" Height="50" FontSize="17" Margin="192,133,150,117" Text="{Binding FoodSelected.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
-                        <TextBox Grid.Column="1" MaxLength="2" PreviewTextInput="TextBox_PreviewTextInput"  Width="300" Background="White" Height="50" FontSize="17" Margin="192,175,150,50" Text="{Binding HowMach, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Column="1" MaxLength="2" PreviewTextInput="TextBox_PreviewTextInput"  Width="300" Background="White" Height="50" FontSize="17" Margin="192,175,150,50" Text="{Binding HowMach, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextChanged="TextBox_TextChanged"/>
 
                         <TextBlock Text="Count" Grid.Column="1"
                             Foreground="Black"

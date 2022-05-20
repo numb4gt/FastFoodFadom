@@ -64,6 +64,12 @@ namespace FastFoodFadom.ViewModels
 
         private void OnAddToList(object p)
         {
+            if(HowMach == 0)
+            {
+                MessageBox.Show("Ноль еды? Брат, потише");
+                return;
+            }
+
             try
             {
                 var toCustomer = new UserOrder();

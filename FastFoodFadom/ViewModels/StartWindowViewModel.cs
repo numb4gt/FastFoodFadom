@@ -8,6 +8,7 @@ using FastFoodFadom.Views.Windows;
 using FastFoodFadom.Models;
 using System.Diagnostics;
 using System.Windows.Navigation;
+using System.Linq;
 
 namespace FastFoodFadom.ViewModels
 {
@@ -37,6 +38,27 @@ namespace FastFoodFadom.ViewModels
             main.Show();
             App.Current.MainWindow.Close();
             App.Current.MainWindow = main;
+        }
+
+        public void FindIndex()
+        {
+            if (db.Order.ToList()[0] == null)
+            {
+                return;
+            }
+
+            var list1 = db.Order.ToList();
+            var list2 = db.OrderFromMenu.ToList();
+
+            MainCoast.Coast2 = (list1.Last().OrderKey);
+
+            MainCoast.Coast = (list2.Last().OrderKey);
+
+            MainCoast.Coast2++;
+            MainCoast.Coast++;
+
+
+
         }
 
         public ICommand Change { get; }
@@ -69,6 +91,7 @@ namespace FastFoodFadom.ViewModels
 
         public StartWindowViewModel()
         {
+            FindIndex();
             MainCoast.Coast3 = 1;
             db.UserOrder.RemoveRange(db.UserOrder);
             db.SaveChanges();
