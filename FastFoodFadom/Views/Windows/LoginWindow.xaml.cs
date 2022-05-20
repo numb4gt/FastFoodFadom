@@ -21,5 +21,6 @@ namespace FastFoodFadom.Views.Windows
         {
             InitializeComponent();
         }
+
     }
 }

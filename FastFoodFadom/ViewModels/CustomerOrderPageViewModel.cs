@@ -17,6 +17,15 @@ namespace FastFoodFadom.ViewModels
     class CustomerOrderPageViewModel : ViewModelBase
     {
 
+        private int _FinalCoast = 0;
+
+
+        public int FinalCoast
+        {
+            get => _FinalCoast;
+            set => Set(ref _FinalCoast, value);
+        }
+
         private List<UserOrder> _list;
 
         public List<UserOrder> List2
@@ -65,7 +74,7 @@ namespace FastFoodFadom.ViewModels
             foreach (var item in List)
             {
                 order1.OrderKey = MainCoast.Coast;
-                order1.NameOf = item.Name;
+                order1.NameOf = item.Name + "   " + MainCoast.Coast2.ToString();
                 order1.Count = Convert.ToInt32(item.HowMach);
                 order1.Coast = Convert.ToInt32(item.Coast);
                 db.OrderFromMenu.Add(order1);
@@ -116,7 +125,16 @@ namespace FastFoodFadom.ViewModels
             
         }
 
-
+        public void Summ()
+        {
+           
+                var list = db.UserOrder.ToList();
+                foreach(var item in list)
+                {
+                    FinalCoast += Convert.ToInt32(item.Coast);
+                }
+            
+        }
 
 
         public FastFoodFandomContext db = new FastFoodFandomContext();
@@ -126,6 +144,7 @@ namespace FastFoodFadom.ViewModels
 
         public CustomerOrderPageViewModel()
         {
+            Summ();
             List2 = db.UserOrder.ToList();
             Add = new LamdaCommand(OnAdd, CanAdd);
             Delete = new LamdaCommand(OnDelete, CanDelete);
