@@ -48,13 +48,7 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
 
-                            <DataGridTemplateColumn Width="250" Header="Button">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
+                            
 
                         </DataGrid.Columns>
                     </DataGrid>
@@ -169,13 +163,6 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
 
-                            <DataGridTemplateColumn Width="250" Header="Button">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
 
                         </DataGrid.Columns>
                     </DataGrid>

@@ -24,6 +24,9 @@
         <TabControl Grid.Row="0" Grid.Column="0">
             <TabItem Header="Reset">
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="37*"/>
                         <RowDefinition Height="33*"/>
@@ -47,18 +50,12 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
 
-                            <DataGridTemplateColumn Width="250" Header="Button">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
+
 
                         </DataGrid.Columns>
                     </DataGrid>
-                    
-                    
+
+
 
                     <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="-1250,200,0,0" Command="{Binding Path=DeleteData}">
                         <TextBlock Text="Удалить"
@@ -67,7 +64,7 @@
                         </TextBlock>
                     </Button>
 
-                   
+
 
                     <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="-1250,80,0,0" Command="{Binding Path=RefreshData}">
                         <TextBlock Text="Сохранить"
@@ -83,7 +80,7 @@
                         </TextBlock>
                     </Button>
 
-                    <Grid Background="#112D4E" Grid.Row="1" Width="1000" Height="300">
+                    <Grid Background="#112D4E" Grid.Row="1" Width="1000" Height="300" Margin="272,48,271,48">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="555*"/>
                             <ColumnDefinition Width="994*"/>
@@ -136,8 +133,8 @@
 
                     </Grid>
 
-                    
-                    
+
+
                 </Grid>
 
             </TabItem>
@@ -168,13 +165,7 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
 
-                            <DataGridTemplateColumn Width="250" Header="Button">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
+                          
 
                         </DataGrid.Columns>
                     </DataGrid>

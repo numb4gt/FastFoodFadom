@@ -53,20 +53,14 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
 
-                            <DataGridTemplateColumn Width="250" Header="Button">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
+                           
 
                         </DataGrid.Columns>
                     </DataGrid>
 
 
 
-                    <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="46,273,1297,73" Command="{Binding Path=DeleteData}">
+                    <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="-1250,200,0,0" Command="{Binding Path=DeleteData}">
                         <TextBlock Text="Удалить"
                                                        Foreground="#F9F7F7"
                                                        FontSize="17"  FontFamily="Arial Black">
@@ -75,14 +69,14 @@
 
 
 
-                    <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="46,213,1297,133" Command="{Binding Path=RefreshData}">
+                    <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="-1250,80,0,0" Command="{Binding Path=RefreshData}">
                         <TextBlock Text="Сохранить"
                                                        Foreground="#F9F7F7"
                                                        FontSize="17"  FontFamily="Arial Black">
                         </TextBlock>
                     </Button>
 
-                    <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="46,153,1297,193" Command="{Binding Path=NullNewInDB}">
+                    <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="-1250,-40,0,0" Command="{Binding Path=NullNewInDB}">
                         <TextBlock Text="Сбросить"
                                                        Foreground="#F9F7F7"
                                                        FontSize="17"  FontFamily="Arial Black">
@@ -174,13 +168,7 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
 
-                            <DataGridTemplateColumn Width="250" Header="Button">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
+                            
 
                         </DataGrid.Columns>
                     </DataGrid>
