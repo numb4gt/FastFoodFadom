@@ -50,6 +50,13 @@ namespace FastFoodFadom.ViewModels
         private void OnChangeAdmin(object p)
         {
 
+            if(login == null || password2 == null)
+            {
+                MessageBox.Show("Все поля должны быть заполнены");
+                return;
+            }
+
+
             if (login.Length <= 30 && login.Length >= 4 && password2.Length <= 30 && password2.Length >= 4)
             {
                 var list = db.Admin.ToList();

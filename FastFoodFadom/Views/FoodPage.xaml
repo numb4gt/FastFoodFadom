@@ -67,7 +67,7 @@
                         </TextBlock>
                     </Button>
 
-                   
+
 
                     <Button Background="#112D4E" Grid.Column="0" Grid.Row="1" Width="200" Height="50" Margin="-1250,0,0,0" Command="{Binding Path=NullNewInDB}">
                         <TextBlock Text="Сбросить"
@@ -81,11 +81,6 @@
                             <ColumnDefinition Width="555*"/>
                             <ColumnDefinition Width="994*"/>
                         </Grid.ColumnDefinitions>
-
-                        <TextBlock Text="Key" Grid.Column="1" Width="120" Height="50" Margin="22,23,500,227"
-                                      Foreground="Black"
-                                       FontSize="40"  FontFamily="Arial Black" 
-                               ></TextBlock>
 
 
                         <TextBlock Text="Name" Grid.Column="1"
@@ -110,22 +105,18 @@
                              Width="200"
                              Height="200"
                              Cursor="Arrow" Margin="79,33,79,67">
-                         
+
                         </Image>
-
-
-
-                        <TextBlock Grid.Column="1" Width="300" Background="White" FontSize="17" Height="50" Margin="192,23,150,227" Text="{Binding FoodSelected.FoodId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                         <TextBlock Grid.Column="1"  Width="300" Background="White" Height="50" FontSize="17" Margin="192,78,150,172" Text="{Binding FoodSelected.Coast, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
                         <TextBlock Grid.Column="1"  Width="300" Background="White" Height="50" FontSize="17" Margin="192,133,150,117" Text="{Binding FoodSelected.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                        
-                        <TextBox Grid.Column="1"  Width="300" Background="White" Height="50" FontSize="17" Margin="242,212,100,38" Text="{Binding HowMach, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                        
+
+                        <TextBox Grid.Column="1" MaxLength="2" PreviewTextInput="TextBox_PreviewTextInput"  Width="300" Background="White" Height="50" FontSize="17" Margin="192,175,150,50" Text="{Binding HowMach, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
                         <TextBlock Text="Count" Grid.Column="1"
                             Foreground="Black"
-                            FontSize="40"  FontFamily="Arial Black" Height="50" Margin="65,212,423,38"
+                            FontSize="40"  FontFamily="Arial Black" Height="50" Margin="22,183,466,67"
                                />
 
                     </Grid>

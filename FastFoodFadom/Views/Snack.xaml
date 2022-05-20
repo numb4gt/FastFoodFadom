@@ -128,9 +128,9 @@
 
                         <TextBlock Grid.Column="1" Width="300" Background="White" FontSize="17" Height="50" Margin="192,23,150,227" Text="{Binding FoodSelected.SnackId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
-                        <TextBox Grid.Column="1"  Width="300" Height="50" FontSize="17" Margin="192,78,150,172" Text="{Binding FoodSelected.Coast, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBox Grid.Column="1" MaxLength="8" PreviewTextInput="TextBox_PreviewTextInput"  Width="300" Height="50" FontSize="17" Margin="192,78,150,172" Text="{Binding FoodSelected.Coast, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
-                        <TextBox Grid.Column="1"  Width="300" Height="50" FontSize="17" Margin="192,133,150,117" Text="{Binding FoodSelected.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Column="1" MaxLength="20"  Width="300" Height="50" FontSize="17" Margin="192,133,150,117" Text="{Binding FoodSelected.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
 
 
@@ -231,9 +231,9 @@
 
                         <TextBox Grid.Column="1" Width="300" Background="White" FontSize="17" Height="50" Margin="192,23,150,227" Text="{Binding CodOfFood2, UpdateSourceTrigger=PropertyChanged}" />
 
-                        <TextBox Grid.Column="1"  Width="300" Height="50" FontSize="17" Margin="192,78,150,172" Text="{Binding Coast2, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBox Grid.Column="1" MaxLength="8" PreviewTextInput="TextBox_PreviewTextInput_1" Width="300" Height="50" FontSize="17" Margin="192,78,150,172" Text="{Binding Coast2, UpdateSourceTrigger=PropertyChanged}" />
 
-                        <TextBox Grid.Column="1"  Width="300" Height="50" FontSize="17" Margin="192,133,150,117" Text="{Binding Name2, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Column="1" MaxLength="20"  Width="300" Height="50" FontSize="17" Margin="192,133,150,117" Text="{Binding Name2, UpdateSourceTrigger=PropertyChanged}"/>
 
 
 

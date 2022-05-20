@@ -61,7 +61,7 @@ namespace FastFoodFadom.ViewModels
         private void OnRegistration(object p)
         {
 
-            if(password == null || password2 == null || login == null || SuperKey == null)
+            if(password == "" || password2 == null || login == null || SuperKey == 0)
             {
                 MessageBox.Show("Не все поля заполнены");
                 return;

@@ -6,6 +6,8 @@ using System.Windows.Input;
 using FastFoodFadom.Infrastucture.Commands;
 using FastFoodFadom.Views.Windows;
 using FastFoodFadom.Models;
+using System.Diagnostics;
+using System.Windows.Navigation;
 
 namespace FastFoodFadom.ViewModels
 {
@@ -43,10 +45,13 @@ namespace FastFoodFadom.ViewModels
 
         private void OnChange(object p)
         {
-            db.Order.RemoveRange(db.Order);
-            db.SaveChanges();
+            //NavigationService.Navigate(New Uri("/page2.xaml", UriKind.Relative)
+            //Process.Start("https://app.diagrams.net/");
 
             db.OrderFromMenu.RemoveRange(db.OrderFromMenu);
+            db.SaveChanges();
+
+            db.Order.RemoveRange(db.Order);
             db.SaveChanges();
         }
 
