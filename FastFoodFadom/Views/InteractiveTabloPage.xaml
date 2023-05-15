@@ -22,7 +22,8 @@
         <Grid Grid.Column="0" Grid.Row="0">
             <DataGrid ItemsSource="{Binding List1}"  AutoGenerateColumns="False" IsReadOnly="True" Grid.Column="0" x:Name="Blase" SelectedItem="{Binding IsSelected, Mode=TwoWay}" Grid.ColumnSpan="2">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Key" Width="398" FontSize="50" Binding="{Binding Path=OrderKey}">
+                    <DataGridTextColumn Header="Key" Width="800" FontSize="50" Binding="{Binding Path=OrderKey}">
+                        
                     </DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
@@ -32,7 +33,7 @@
         <Grid Grid.Column="1" Grid.Row="0">
             <DataGrid ItemsSource="{Binding List2}" Background="Aqua" AutoGenerateColumns="False" IsReadOnly="True" Grid.Column="0" SelectedItem="{Binding IsSelected, Mode=TwoWay}" Grid.ColumnSpan="2">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Key" Width="398" FontSize="50"  Binding="{Binding Path=OrderKey}">
+                    <DataGridTextColumn Header="Key" Width="800" FontSize="50"  Binding="{Binding Path=OrderKey}">
                     </DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>

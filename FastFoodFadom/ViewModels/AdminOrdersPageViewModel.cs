@@ -105,11 +105,48 @@ namespace FastFoodFadom.ViewModels
 
         }
 
+        public ICommand DropDB { get; }
+
+        private bool CanDrop(object p)
+        {
+            return true;
+        }
+
+        private void OnDrop(object p)
+        {
+            if (SuperAdminKey == SuperKey)
+            {
+                if (MessageBox.Show($"Вы точно хотите сбросить все имеющиеся заказы?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question)== MessageBoxResult.Yes){
+                    try
+                    {
+                        db.OrderFromMenu.RemoveRange(db.OrderFromMenu);
+                        db.SaveChanges();
+
+                        db.Order.RemoveRange(db.Order);
+                        db.SaveChanges();
+                        MessageBox.Show("База успешно сброшена");
+                    }catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Для данного действия необходимо ввести ключ");
+            }
+         
+
+        }
+
+
+
 
 
         public AdminOrdersPageViewModel()
         {
             Registration = new LamdaCommand(OnRegistration, CanRegistration);
+            DropDB = new LamdaCommand(OnDrop,CanDrop);
         }
 
 

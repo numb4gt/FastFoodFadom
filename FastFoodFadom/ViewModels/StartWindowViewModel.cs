@@ -42,8 +42,11 @@ namespace FastFoodFadom.ViewModels
 
         public void FindIndex()
         {
-            if (db.Order.ToList()[0] == null)
+            var list3 = db.Order.ToList();
+            if (list3.Count == 0)
             {
+                MainCoast.Coast = 1;
+                MainCoast.Coast2 = 1;
                 return;
             }
 

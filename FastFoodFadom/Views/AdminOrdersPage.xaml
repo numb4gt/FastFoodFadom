@@ -80,6 +80,7 @@
         <TextBox HorizontalAlignment="Center" MaxLength="4" Height="40" Margin="-60,700,0,0" Text="{Binding SuperKey}" TextWrapping="Wrap"  Width="600" FontSize="26" Background="Violet"/>
 
         <Button Template="{DynamicResource ButtonTemplate1}" Command="{Binding Registration}" Content="Registration" Margin="1100,700,0,0" Width="400" Height="80" Background="#48466D" Foreground="White" FontSize="40"/>
+        <Button Template="{DynamicResource ButtonTemplate1}" Command="{Binding DropDB}" Content="DeleteAllOrders" Margin="1100,500,0,0" Width="400" Height="80" Background="#48466D" Foreground="White" FontSize="40"/>
 
     </Grid>
 </UserControl>
